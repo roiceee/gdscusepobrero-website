@@ -12,7 +12,7 @@ export default function Home() {
           width={200}
           placeholder="blur"
         />
-        <h1 className=" text-4xl">Currently on planning phase</h1>
+        <h1 className=" text-4xl">Coming soon</h1>
       </div>
     </main>
   );
