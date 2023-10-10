@@ -1,6 +1,6 @@
-import "../css/globals.css";
 import type { Metadata } from "next";
 import googleSans from "next/font/local";
+import "../css/globals.css";
 
 const googlesans = googleSans({
   src: "../font/googlesans-regular.woff2",
