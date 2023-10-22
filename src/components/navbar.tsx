@@ -20,12 +20,12 @@ export function StickyNavbar() {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Link href={"/"}>Home</Link>
-      <Link href={"/"}>About</Link>
-      <Link href={"/"}>Events</Link>
-      <Link href={"/"}>Team</Link>
-      <Link href={"/"}>Contact us!</Link>
+    <ul className="mt-6 text-center flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <Link href={"/"} className="text-black">Home</Link>
+      <Link href={"/"} className="text-black">About</Link>
+      <Link href={"/"} className="text-black">Events</Link>
+      <Link href={"/"} className="text-black">Team</Link>
+      <Link href={"/"} className="text-black">Contact us!</Link>
     </ul>
   );
 
@@ -76,7 +76,7 @@ export function StickyNavbar() {
           </IconButton>
         </div>
       </div>
-      <Collapse open={openNav}>{navList}</Collapse>
+      <Collapse open={openNav} className="">{navList}</Collapse>
     </Navbar>
   );
 }
