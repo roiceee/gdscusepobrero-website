@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import googleSans from "next/font/local";
 import "../css/globals.css";
+import { StickyNavbar } from "@/components/navbar";
 
 const googlesans = googleSans({
   src: "../font/googlesans-regular.woff2",
@@ -19,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={googlesans.className}>
-      <body>{children}</body>
+      <body>
+        <StickyNavbar />
+        {children}
+      </body>
     </html>
   );
 }
