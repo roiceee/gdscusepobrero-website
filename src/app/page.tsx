@@ -3,7 +3,7 @@ import gdsc from "public/images/gdsc.png";
 
 export default function Home() {
   return (
-    <main className="flex h-screen w-screen items-center justify-center">
+    <main className="flex h-screen items-center justify-center">
       <div>
         <h1 className="text-4xl font-bold">
           Coming Soon!
