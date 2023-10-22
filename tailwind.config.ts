@@ -21,6 +21,7 @@ const config: Config = withMT({
       'gray': '#5f6368',
       'light-gray': "#f1f3f4",
       'maroon': "#9a0000",
+      'black': "#2C384A",
     },
     extend: {},
   },
