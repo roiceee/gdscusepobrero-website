@@ -6,10 +6,7 @@ export default function Home() {
     <main className="flex h-screen w-screen items-center justify-center">
       <div>
         <h1 className="text-4xl font-bold">
-          <span className=" text-red">Com</span>
-          <span className=" text-blue">ing </span>
-          <span className=" text-yellow">So</span>
-          <span className=" text-green">on!</span>
+          Coming Soon!
         </h1>
       </div>
     </main>
