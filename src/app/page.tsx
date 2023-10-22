@@ -5,14 +5,12 @@ export default function Home() {
   return (
     <main className="flex h-screen w-screen items-center justify-center">
       <div>
-        <Image
-          className="mx-auto mb-4"
-          src={gdsc}
-          alt="GDSC Icon"
-          width={200}
-          placeholder="blur"
-        />
-        <h1 className=" text-4xl">Arriving Soon!</h1>
+        <h1 className="text-4xl font-bold">
+          <span className=" text-red">Com</span>
+          <span className=" text-blue">ing </span>
+          <span className=" text-yellow">So</span>
+          <span className=" text-green">on!</span>
+        </h1>
       </div>
     </main>
   );
