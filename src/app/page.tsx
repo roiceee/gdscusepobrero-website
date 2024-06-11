@@ -61,7 +61,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center bg-gray bg-opacity-10">
 
       <div className="bg-white w-full pt-8 md: shadow-[0_1px_8px_rgba(0,0,0,0.25)]">
-        <div className="px-6 flex flex-col items-end justify-end gap-4 w-full bg-cover bg-no-repeat bg-bottom-right bg-[60%] h-[80vh] md:bg-contain md:bg-[0%] md:px-14 xl:px-20" style={{backgroundImage: 'url(/images/eagle.png)'}}>
+        <div className="px-6 flex flex-col items-end justify-end gap-4 w-full bg-cover bg-no-repeat bg-bottom-right bg-[60%] h-[80vh] md:bg-contain md:bg-[0%]" style={{backgroundImage: 'url(/images/eagle.png)'}}>
           <div className="flex flex-col text-right text-2xl xl:text-3xl  font-extrabold">  
             <span style={{textShadow: "1px 1px #f28b82"}}>Grow.</span>
             <span style={{textShadow: "1px 1px #FDE293"}}>Learn.</span>
