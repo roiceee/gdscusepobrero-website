@@ -8,6 +8,7 @@ import 'swiper/swiper-bundle.css';
 import "swiper/css/effect-coverflow";
 import { EffectCoverflow } from "swiper/modules";
 import { Swiper as SwiperType } from 'swiper/types';
+import SectionContainer from '@/containers/SectionContainer';
 
 const events = [
   {
@@ -60,7 +61,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center bg-gray bg-opacity-10">
 
-      <div className="bg-white w-full pt-8 md: shadow-[0_1px_8px_rgba(0,0,0,0.25)]">
+      <SectionContainer className="bg-white w-full pt-8 md: shadow-[0_1px_8px_rgba(0,0,0,0.25)]">
         <div className="px-6 flex flex-col items-end justify-end gap-4 w-full bg-cover bg-no-repeat bg-bottom-right bg-[60%] h-[80vh] md:bg-contain md:bg-[0%]" style={{backgroundImage: 'url(/images/eagle.png)'}}>
           <div className="flex flex-col text-right text-2xl xl:text-3xl  font-extrabold">  
             <span style={{textShadow: "1px 1px #f28b82"}}>Grow.</span>
@@ -75,9 +76,9 @@ export default function Home() {
           </div>
           
         </div>
-      </div>
+      </SectionContainer>
 
-      <div className="w-full flex flex-col items-center">
+      <SectionContainer className="w-full flex flex-col items-center">
         <p className="text-center text-xl font-bold pt-16 pb-6">Previous Events</p>
         <div className="w-full flex flex-col items-center gap-4 max-w-screen-md">
           <Swiper
@@ -106,9 +107,9 @@ export default function Home() {
           </div>
         </div>
         <button className="my-20 border-2 border-green bg-green-mute bg-opacity-25 px-4 py-1 rounded-lg text-green text-xs">Meet the Team</button>
-      </div>
+      </SectionContainer>
 
-      <div className="w-full bg-white shadow-[0_1px_8px_rgba(0,0,0,0.25)] py-10 flex flex-col items-center gap-4">
+      <SectionContainer className="w-full bg-white shadow-[0_1px_8px_rgba(0,0,0,0.25)] py-10 flex flex-col items-center gap-4">
         <p className="text-xl font-bold">Join our Community</p>
         <div className="w-4/5 md:max-w-[380px] lg:max-w-[500px] flex flex-col gap-8">
           <div className="p-4">
@@ -117,7 +118,7 @@ export default function Home() {
           <p className="text-center text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <button className="mt-6 border-2 border-yellow bg-yellow-mute bg-opacity-25 px-4 py-1 rounded-lg text-yellow text-xs">Meet the Team</button>
-      </div>
+      </SectionContainer>
     </main>
   );
 }
