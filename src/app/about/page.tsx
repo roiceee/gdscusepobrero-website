@@ -1,7 +1,8 @@
 import SectionContainer from "@/containers/SectionContainer";
-import cover from "public/images/about-cover.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import cover from "../../../public/images/about-cover.jpg";
+
 
 const data: { name: string; url: string; imageSrc: string }[] = [
   {

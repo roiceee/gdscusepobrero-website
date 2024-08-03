@@ -3,7 +3,7 @@ import { Collapse, IconButton, Navbar } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import gdscIcon from "public/images/gdsc-long.png";
+import gdscIcon from "../../public/images/gdsc-long.png";
 import { usePathname } from "next/navigation";
 
 export function StickyNavbar({}) {

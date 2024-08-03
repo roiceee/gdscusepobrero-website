@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from "next/image";
-import JoinOurCommunity from "public/images/JoinOurCommunity.png";
+import JoinOurCommunity from "../../public/images/JoinOurCommunity.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css';
 import "swiper/css/effect-coverflow";
