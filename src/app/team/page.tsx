@@ -93,7 +93,7 @@ export default async function Team() {
                         <p className="text-center text-l">Promotions Manage</p>
                     </div>
 
-                    <div className="flex flex-col items-center justify-start">
+                    <div className="flex flex-col items-center justify-start col-span-2">
                         <img src="https://via.placeholder.com/150" alt="Placeholder" className="w-40 h-40 object-cover"/>
                         <h2 className="text-xl font-bold text-center">Reymart Manaytay</h2>
                         <p className="text-center text-l">Branding Manager</p>
@@ -103,7 +103,6 @@ export default async function Team() {
                     <div className="bg-blue bg-opacity-70 sm:w-20 h-5"></div>
                     <div className="w-30"></div>
                     <div className="bg-blue w-full h-5"></div>
-                    <div className="w-1"></div>
                     <h1 className="text-3xl font-bold text-center">Finance</h1>
                     <div className="w-full sm:w-100"></div>
                 </div>
@@ -126,8 +125,9 @@ export default async function Team() {
                 <div className="flex items-center justify-end space-x-2 sm:space-x-2 sm:space-y-0">
                     <div className="w-full sm:w-100"></div>
                     <div className="w-30"></div>
+                    <div className="bg-yellow bg-opacity-70 w-40 h-5"></div>
                     <h1 className="text-3xl font-bold text-center">Operations</h1>
-                    <div className="bg-green bg-opacity-70 w-full h-5"></div>
+                    <div className="bg-red bg-opacity-70 w-full h-5"></div>
                 </div>
                 <div>
                     <h2 className="text-lg m-2 text-center">The Operations Team oversees day-to-day functions, event management, ad hoc projects, recruitment, and member welfare, ensuring smooth operations and a positive organizational culture.</h2>
@@ -157,17 +157,16 @@ export default async function Team() {
                         <p className="text-center text-l">Secretary</p>
                     </div>
 
-                    <div className="flex flex-col items-center justify-start">
+                    <div className="flex flex-col items-center justify-start col-span-2">
                         <img src="https://via.placeholder.com/150" alt="Placeholder" className="w-40 h-40 object-cover"/>
                         <h2 className="text-xl font-bold text-center">Lindsay Cañete</h2>
                         <p className="text-center text-l">Events Manager</p>
                     </div>
                 </div>
-                <div className="flex items-center justify-end space-x-2 sm:space-x-2 sm:space-y-0">
-                    <div className="w-30"></div>
+                <div className="flex items-center justify-start space-x-2 sm:space-x-2 sm:space-y-0">
                     <div className="bg-green bg-opacity-70 sm:w-20 h-5"></div>
-                    <div className="w-1"></div>
-                    <div className="bg-green bg-opacity-20 w-full h-5"></div>
+                    <div className="w-30"></div>
+                    <div className="bg-green w-full h-5"></div>
                     <h1 className="text-3xl font-bold text-center">Adviser</h1>
                     <div className="w-full sm:w-100"></div>
                 </div>
