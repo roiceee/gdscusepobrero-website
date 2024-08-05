@@ -1,9 +1,10 @@
+import { ThemeProvider } from "@/components/client-wrapper";
 import Footer from "@/components/footer";
 import { StickyNavbar } from "@/components/navbar";
 import type { Metadata } from "next";
 import googleSans from "next/font/local";
 import "../css/globals.css";
-import { ThemeProvider } from "@/components/client-wrapper";
+import Script from "next/script";
 
 const googlesans = googleSans({
   src: "../../public/fonts/googlesans-regular.woff2",

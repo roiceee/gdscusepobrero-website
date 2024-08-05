@@ -6,37 +6,37 @@ import cover from "../../../public/images/about-cover.jpg";
 
 const data: { name: string; url: string; imageSrc: string }[] = [
   {
-    name: "John Doe",
+    name: "John Roice Aldeza",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Jane Doe",
+    name: "Vincent Dialing",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Juan Dela Cruz",
+    name: "Alexander Vaugn Villasis",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Maria Clara",
+    name: "Kimzie Torres",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Pedro Penduko",
+    name: "Jaime Emanuel Lucero",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Juan Tamad",
+    name: "Keziah Bante",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Maria Makiling",
+    name: "Jib Java",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
@@ -89,7 +89,7 @@ export default function Page() {
 
         <section className="mt-12">
           <h2 className="font-semibold text-xl mb-4">
-            Website Development Team
+            Website Team
           </h2>
           <p>
             Our sincere thanks to the following individuals for contributing to
@@ -130,6 +130,7 @@ export default function Page() {
                 </div>
               </div>
             ))}
+            
           </div>
         </section>
       </SectionContainer>
