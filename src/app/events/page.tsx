@@ -1,10 +1,10 @@
 import { Button } from "@/components/client-wrapper";
+import Gallery from "@/components/gallery";
 import SectionContainer from "@/containers/SectionContainer";
+import Image from "next/image";
 import Link from "next/link";
 import ScrapedEventType from "../../types/scrapedEventType";
-import Image from "next/image";
-import { NextResponse } from "next/server";
-import Gallery from "@/components/gallery";
+
 
 export default async function Page() {
   const res = await fetch(`${process.env.APP_URL}/api/events`);
