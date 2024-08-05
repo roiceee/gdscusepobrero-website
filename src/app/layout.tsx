@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ThemeProvider>
-      <html
+    
+     <html
         lang="en"
         className={`${googlesans.className} text-black min-h-full`}
       >
@@ -32,7 +32,7 @@ export default function RootLayout({
           <div className="flex-grow my-8">{children}</div>
           <Footer />
         </body>
-      </html>
-    </ThemeProvider>
+      </html> 
+    
   );
 }
