@@ -45,7 +45,7 @@ const data: { name: string; url: string; imageSrc: string }[] = [
 export default function Page() {
   return (
     <main>
-      <SectionContainer>
+      <SectionContainer className="px-2">
         <h1 className="text-4xl font-bold text-center">About</h1>
 
         <section className="my-6">
@@ -96,7 +96,7 @@ export default function Page() {
             this website:
           </p>
 
-          <div className="flex gap-4">
+          <div className="sm:flex gap-4 flex-wrap">
             {data.map((member, index) => (
               <div
                 key={index}
