@@ -58,9 +58,9 @@ export default function Page() {
         </section> */}
 
         <section className="mt-12">
-          <div className="flex items-center justify-start">
-            <div className="bg-yellow w-full h-5 rounded-full"></div>
-            <div className="w-full"></div>
+          <div className="flex items-center justify-start gap-3">
+            <div className="bg-yellow w-1/2 lg:w-1/3 h-5 rounded-full"></div>
+            <div className=" border-yellow border-2 h-5 rounded-full w-[50px]"></div>
           </div>
 
           <div className="lg:flex items-center my-4">
@@ -78,8 +78,8 @@ export default function Page() {
             />
           </div>
 
-          <div className="flex items-center justify-start">
-            <div className="w-full sm:w-100"></div>
+          <div className="flex items-center justify-end gap-4">
+            <div className=" border-green border-2 h-5 rounded-full w-[50px]"></div>
             <div className="bg-green w-full lg:w-1/2 h-5 rounded-full"></div>
           </div>
 
