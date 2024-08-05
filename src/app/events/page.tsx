@@ -7,7 +7,7 @@ import ScrapedEventType from "../../types/scrapedEventType";
 
 
 export default async function Page() {
-  const res = await fetch(`${process.env.APP_URL}/api/events`);
+  const res = await fetch(`${process.env.APP_URL}/api/events`, {cache: "no-store"});
 
   const recentEventScrapedContent:
     | { status: number; events: ScrapedEventType[] }

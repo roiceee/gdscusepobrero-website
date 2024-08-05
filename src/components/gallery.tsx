@@ -4,13 +4,13 @@ import Image from "next/image";
 import React from "react";
 //import the images statically
 
-import imageOne from "public/images/events/1.png";
-import imageTwo from "public/images/events/2.png";
-import imageThree from "public/images/events/3.png";
-import imageFour from "public/images/events/4.png";
-import imageFive from "public/images/events/5.png";
-import imageSix from "public/images/events/6.png";
-import imageSeven from "public/images/events/7.png";
+import imageOne from "/public/images/events/1.png";
+import imageTwo from "/public/images/events/2.png";
+import imageThree from "/public/images/events/3.png";
+import imageFour from "/public/images/events/4.png";
+import imageFive from "/public/images/events/5.png";
+import imageSix from "/public/images/events/6.png";
+import imageSeven from "/public/images/events/7.png";
 
 export default function Gallery() {
   const data = [
