@@ -15,10 +15,10 @@ import imageSeven from "/public/images/events/7.png";
 export default function Gallery() {
   const data = [
     {
-      imgelink: imageOne,
+      imgelink: imageTwo,
     },
     {
-      imgelink: imageTwo,
+      imgelink: imageOne,
     },
     {
       imgelink: imageThree,
