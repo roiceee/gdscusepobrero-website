@@ -11,6 +11,12 @@ import imageFour from "/public/images/events/4.png";
 import imageFive from "/public/images/events/5.png";
 import imageSix from "/public/images/events/6.png";
 import imageSeven from "/public/images/events/7.png";
+import imageNine from "/public/images/events/9.png";
+import imageTen from "/public/images/events/10.png";
+import imageEleven from "/public/images/events/11.png";
+import imageTwelve from "/public/images/events/12.png";
+import imageThirteen from "/public/images/events/13.png";
+import imageFourteen from "/public/images/events/14.png";
 
 export default function Gallery() {
   const data = [
@@ -35,6 +41,24 @@ export default function Gallery() {
     {
       imgelink: imageSeven,
     },
+    {
+      imgelink: imageNine,
+    },
+    {
+      imgelink: imageTen,
+    },
+    {
+      imgelink: imageEleven,
+    },
+    {
+      imgelink: imageTwelve,
+    },
+    {
+      imgelink: imageThirteen,
+    },
+    {
+      imgelink: imageFourteen
+    }
   ];
 
   return (
