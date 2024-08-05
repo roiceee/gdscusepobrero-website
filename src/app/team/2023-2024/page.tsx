@@ -220,7 +220,7 @@ export default function Page() {
         </section>
         <section className="my-20">
           <div className="flex items-center justify-start space-x-2 sm:space-x-2 sm:space-y-0">
-            <div className="bg-yellow bg-opacity-65 w-full h-5"></div>
+            <div className="bg-yellow bg-opacity-65 w-full h-5 rounded-full"></div>
             <div className="w-30"></div>
             <h1 className="text-3xl font-bold text-center">Technology</h1>
             <div className="w-full sm:w-100"></div>
@@ -242,7 +242,7 @@ export default function Page() {
             <div className="w-full sm:w-100"></div>
             <div className="w-30"></div>
             <h1 className="text-3xl font-bold text-center">Creatives</h1>
-            <div className="bg-green bg-opacity-70 w-full h-5"></div>
+            <div className="bg-green bg-opacity-70 w-full h-5 rounded-full"></div>
           </div>
           <div>
             <h2 className="text-md my-6 text-center">
@@ -259,9 +259,9 @@ export default function Page() {
         </section>
         <section className="my-20">
           <div className="flex items-center justify-start space-x-2 sm:space-x-2 sm:space-y-0">
-            <div className="bg-blue bg-opacity-70 sm:w-20 h-5"></div>
+            <div className="bg-blue bg-opacity-70 sm:w-20 h-5 rounded-full"></div>
             <div className="w-30"></div>
-            <div className="bg-blue w-full h-5"></div>
+            <div className="bg-blue w-full h-5 rounded-full"></div>
             <h1 className="text-3xl font-bold text-center">Finance</h1>
             <div className="w-full sm:w-100"></div>
           </div>
@@ -281,9 +281,9 @@ export default function Page() {
           <div className="flex items-center justify-end space-x-2 sm:space-x-2 sm:space-y-0">
             <div className="w-full sm:w-100"></div>
             <div className="w-30"></div>
-            <div className="bg-yellow bg-opacity-70 w-40 h-5"></div>
+            <div className="bg-yellow bg-opacity-70 w-40 h-5 rounded-full"></div>
             <h1 className="text-3xl font-bold text-center">Operations</h1>
-            <div className="bg-red bg-opacity-70 w-full h-5"></div>
+            <div className="bg-red bg-opacity-70 w-full h-5 rounded-full"></div>
           </div>
           <div>
             <h2 className="text-md my-6 text-center">
@@ -300,9 +300,9 @@ export default function Page() {
         </section>
         <section>
           <div className="flex items-center justify-start space-x-2 sm:space-x-2 sm:space-y-0">
-            <div className="bg-green bg-opacity-70 sm:w-20 h-5"></div>
+            <div className="bg-green bg-opacity-70 sm:w-20 h-5 rounded-full"></div>
             <div className="w-30"></div>
-            <div className="bg-green w-full h-5"></div>
+            <div className="bg-green w-full h-5 rounded-full"></div>
             <h1 className="text-3xl font-bold text-center">Adviser</h1>
             <div className="w-full sm:w-100"></div>
           </div>
