@@ -108,7 +108,10 @@ export default function Page() {
           </ul>
         </section>
 
-        <div className="bg-blue w-1/2 lg:w-1/3 rounded-full h-5 my-12"></div>
+        <div className="flex justify-start items-center gap-4">
+          <div className="bg-blue w-1/2 lg:w-1/3 rounded-full h-5 my-12"></div>
+          <div className="border-blue border-2 h-5 rounded-full w-[50px]"></div>
+        </div>
 
         <section className="mt-12">
           <h2 className="font-semibold text-xl mb-4">Website Team</h2>
