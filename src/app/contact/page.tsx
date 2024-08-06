@@ -41,7 +41,7 @@ export default function Page() {
           <div className=" border-red border-2 h-5 rounded-full w-[20px]"></div>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-14">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-14 tracking-wide ">
           We are open for sponsorships and collaborations!
         </h1>
 
