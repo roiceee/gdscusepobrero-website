@@ -52,7 +52,7 @@ export default async function Home() {
 
       <SectionContainer className="px-2">
         <div className="flex justify-end my-24">
-          <div className="w-2/5 flex gap-4">
+          <div className="w-2/3 md:w-2/5 flex gap-4">
             <div className="border-2 border-blue-mute w-1/5 h-4 rounded-full "></div>
             <div className="bg-blue-mute w-4/5 h-4 rounded-full"></div>
           </div>
@@ -88,7 +88,7 @@ export default async function Home() {
       </SectionContainer>
 
       <SectionContainer className="px-2">
-        <div className="w-2/4 flex gap-4 my-24">
+        <div className="w-2/3 md:w-2/5 flex gap-4 my-24">
           <div className="bg-red-mute w-4/5 h-4 rounded-full"></div>
           <div className="border-2 border-red-mute w-1/5 h-4 rounded-full "></div>
         </div>
@@ -146,39 +146,38 @@ export default async function Home() {
       </SectionContainer>
 
       <SectionContainer className="px-2">
-        <div className="w-2/5 flex ml-auto gap-4 my-24 ">
-          <div className="border-2 border-green-mute w-1/5 h-4 rounded-full "></div>
-          <div className="bg-green-mute w-4/5 h-4 rounded-full"></div>
-        </div>
-
-        <div className="flex flex-col items-center gap-10">
-          <p className="text-center text-3xl font-black lg:text-4xl">
-            GDSC USeP Obrero is an official <br />{" "}
-            <span className="text-[#03ef64]">DataCamp Donates</span> Partner
-          </p>
-
-          <p className="text-center max-w-xl">
-            Explore how our joint efforts are driving change and making a real
-            difference. Together, we&apos;re transforming lives and communities.
-          </p>
-
-          <div className="flex flex-col justify-center items-center gap-10 py-10 w-4/5 md:flex-row">
-            <Image src={DataCamp} width={300} alt="DataCamp"></Image>
-            <span className="text-xl">X</span>
-            <Image src={GDSC} width={300} alt="GDSC"></Image>
+        <div className=" bg-cover bg-no-repeat bg-none sm:bg-[url('/images/datacamp-bg.png')]">
+          <div className="w-2/3 md:w-2/5 flex ml-auto gap-4 my-24 ">
+            <div className="border-2 border-green-mute w-1/5 h-4 rounded-full "></div>
+            <div className="bg-green-mute w-4/5 h-4 rounded-full"></div>
           </div>
-
-          <Link href={"https://datacamp.com/donates"} target="_blank">
-            <Button className="bg-green" size="lg">
-              Learn More About DataCamp Donates
-            </Button>
-          </Link>
+          <div className="flex flex-col items-center gap-10">
+            <p className="text-center text-3xl font-black lg:text-4xl">
+              GDSC USeP Obrero is an official <br />{" "}
+              <span className="text-[#03ef64]">DataCamp Donates</span> Partner
+            </p>
+            <p className="text-center max-w-xl">
+              Through DataCamp Donates, GDSC USeP Obrero is able to spread data
+              education to students in the University of Southeastern
+              Philippines and beyond.
+            </p>
+            <div className="flex flex-col justify-center items-center gap-10py-10 w-4/5 md:flex-row">
+              <Image src={DataCamp} width={300} alt="DataCamp"></Image>
+              <span className="text-xl">X</span>
+              <Image src={GDSC} width={300} alt="GDSC"></Image>
+            </div>
+            <Link href={"https://datacamp.com/donates"} target="_blank">
+              <Button className="bg-green" size="lg">
+                Learn More About DataCamp Donates
+              </Button>
+            </Link>
+          </div>
         </div>
       </SectionContainer>
 
       <SectionContainer className="px-2">
         <div className="flex justify-end my-24">
-          <div className="w-2/5 flex gap-4 mr-auto">
+          <div className="w-2/3 md:w-2/5 flex gap-4 mr-auto">
             <div className="bg-yellow-mute w-4/5 h-4 rounded-full"></div>
             <div className="border-2 border-yellow-mute w-1/5 h-4 rounded-full"></div>
           </div>
