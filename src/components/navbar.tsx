@@ -36,30 +36,35 @@ export function StickyNavbar({}) {
       <Link
         href="/"
         className={`text-black ${isActive("/") ? "text-maroon" : ""}`}
+        onClick={() => setOpenNav(!openNav)}
       >
         Home
       </Link>
       <Link
         href="/about"
         className={`text-black ${isActive("/about") ? "text-maroon" : ""}`}
+        onClick={() => setOpenNav(!openNav)}
       >
         About
       </Link>
       <Link
         href="/events"
         className={`text-black ${isActive("/events") ? "text-maroon" : ""}`}
+        onClick={() => setOpenNav(!openNav)}
       >
         Events
       </Link>
       <Link
         href="/team"
         className={`text-black ${isActive("/team") ? "text-maroon" : ""}`}
+        onClick={() => setOpenNav(!openNav)}
       >
         Team
       </Link>
       <Link
         href="/contact"
         className={`text-black ${isActive("/contact") ? "text-maroon" : ""}`}
+        onClick={() => setOpenNav(!openNav)}
       >
         Contact us!
       </Link>
