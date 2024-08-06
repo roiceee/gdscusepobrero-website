@@ -117,6 +117,7 @@ export default async function Home() {
                     width={200}
                     height={200}
                     className="rounded-full"
+                    placeholder="blur"
                   />
                 </Link>
                 <div className="text-center">
@@ -162,9 +163,9 @@ export default async function Home() {
               Philippines and beyond.
             </p>
             <div className="flex flex-col justify-center items-center gap-10py-10 w-4/5 md:flex-row">
-              <Image src={DataCamp} width={300} alt="DataCamp"></Image>
+              <Image src={DataCamp} width={300} alt="DataCamp" placeholder="blur"></Image>
               <span className="text-xl">X</span>
-              <Image src={GDSC} width={300} alt="GDSC"></Image>
+              <Image src={GDSC} width={300} alt="GDSC" placeholder="blur"></Image>
             </div>
             <Link href={"https://datacamp.com/donates"} target="_blank">
               <Button className="bg-green" size="lg">
@@ -187,7 +188,7 @@ export default async function Home() {
           <p className="text-center text-3xl font-black lg:text-4xl">
             Join Our Community!
           </p>
-          <Image src={Join} width={1000} alt="GDSC"></Image>
+          <Image src={Join} width={1000} alt="GDSC" placeholder="blur"></Image>
 
           <p className="text-center max-w-2xl">
             Join GDSC USEP Obrero today and become part of a vibrant community

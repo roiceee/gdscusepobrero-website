@@ -83,6 +83,7 @@ export default function Page() {
               width={800}
               alt=""
               className="rounded-xl h-auto w-full"
+              placeholder="blur"
             />
           </div>
 
@@ -147,6 +148,7 @@ export default function Page() {
                     width={100}
                     height={100}
                     className="rounded-full"
+                    placeholder="blur"
                   />
                 </Link>
                 <div>
