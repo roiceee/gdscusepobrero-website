@@ -281,7 +281,7 @@ export default function Page() {
           <div className="flex items-center justify-end space-x-2 sm:space-x-2 sm:space-y-0">
             <div className="w-full sm:w-100"></div>
             <div className="w-30"></div>
-            <div className="bg-yellow bg-opacity-70 w-40 h-5 rounded-full"></div>
+            <div className="bg-red-mute bg-opacity-70 w-40 h-5 rounded-full"></div>
             <h1 className="text-3xl font-bold text-center">Operations</h1>
             <div className="bg-red bg-opacity-70 w-full h-5 rounded-full"></div>
           </div>
