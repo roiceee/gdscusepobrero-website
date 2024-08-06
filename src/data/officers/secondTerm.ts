@@ -91,17 +91,6 @@ const creatives: OfficerType[] = [
     },
   },
   {
-    name: "Carla Katrina Leduna",
-    position: "Documentations Manager",
-    imageSrc: carla,
-    links: {
-      website: "",
-      facebook: "https://www.facebook.com/carlakatrina.leduna?mibextid=ZbWKwL",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
     name: "Vincent Dialing",
     position: "Branding Manager",
     imageSrc: vince,
@@ -124,8 +113,20 @@ const creatives: OfficerType[] = [
     },
   },
   {
+    name: "Carla Katrina Leduna",
+    position: "Documentation Manager",
+    imageSrc: carla,
+    links: {
+      website: "",
+      facebook: "https://www.facebook.com/carlakatrina.leduna?mibextid=ZbWKwL",
+      linkedin: "",
+      github: "",
+    },
+  },
+
+  {
     name: "Reymart Manaytay",
-    position: "Branding Manager",
+    position: "Documentation Manager",
     imageSrc: remart,
     links: {
       website: "",
