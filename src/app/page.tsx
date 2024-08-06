@@ -1,62 +1,105 @@
-import SectionContainer from "@/containers/SectionContainer";
 import { Button } from "@/components/client-wrapper";
+import SectionContainer from "@/containers/SectionContainer";
 import Image from "next/image";
 
-import WhatareGDSC from "../../public/images/whataregdsc.png";
-import DataCamp from "../../public/images/datacamp.png";
-import GDSC from "../../public/images/gdsc-centered.png";
-import Join from "../../public/images/JoinOurCommunity.png";
 import ScrapedEventType from "@/types/scrapedEventType";
 import Link from "next/link";
+import DataCamp from "../../public/images/datacamp.png";
+import GDSC from "../../public/images/gdsc-centered.png";
+import Join from "../../public/images/about-cover.png";
+import logo from "/public/images/gdsc.png";
 
 export default async function Home() {
-  const res = await fetch(`${process.env.APP_URL}/api/events`);
+  const res = await fetch(`${process.env.APP_URL}/api/events`, {
+    cache: "no-store",
+  });
 
   const recentEventScrapedContent:
     | { status: number; events: ScrapedEventType[] }
     | undefined = await res.json();
 
-  const linkToBevy =
-    "https://gdsc.community.dev/university-of-southeastern-philippines-davao-philippines/";
-
-
   return (
     <main>
       <SectionContainer>
         <div
-          className="px-2 flex flex-col items-end justify-end gap-4 w-full bg-cover bg-no-repeat bg-bottom-right bg-[90%] h-[80vh] md:bg-contain md:bg-[-140%]  xl:bg-[-90%]"
+          className="px-2 mr-6 flex flex-col items-end justify-end bg-cover md:bg-contain bg-no-repeat h-[60vh] bg-[90%] sm:bg-[120%] md:bg-[-70%] lg:bg-[-30%]"
           style={{ backgroundImage: "url(/images/eagle.png)" }}
         >
-          <div className="flex flex-col text-right text-2xl xl:text-3xl  font-extrabold">
-            <span>Grow</span>
-            <span>Learn</span>
-            <span>Connect</span>
-          </div>
-
-          <p className="w-2/5 md:w-[200px] lg:w-[260px] text-xs xl:text-sm text-right">
-            The <b>GDSC USeP Obrero</b> is part of a global community run by
-            students from USeP Obrero.
-          </p>
-
-          <div className="flex justify-end pb-6">
-            <Button className="bg-blue">About Us</Button>
+          <Image
+            src={logo}
+            height={40}
+            alt="GDSC Logo"
+            className="hidden lg:block w-auto ml-auto self-start my-auto"
+          />
+          <div className="text-right">
+            <div className="flex flex-col text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+              <span>Grow</span>
+              <span>Learn</span>
+              <span>Connect</span>
+            </div>
+            <p className="ml-auto w-[200px] md:w-[260px] lg:w-[300px] text-sm sm:text-md lg:text-lg mb-4">
+              <b>GDSC USeP Obrero</b> is part of a global community run by
+              students from USeP Obrero.
+            </p>
+            <Link href={"/about"}>
+              <Button className="bg-blue" size="lg">
+                About Us
+              </Button>
+            </Link>
           </div>
         </div>
       </SectionContainer>
 
-      <SectionContainer className="mb-12">
-        <div className="w-2/4 flex gap-4">
-          <div className="bg-red w-4/5 h-4 rounded-full"></div>
-          <div className="border-2 border-red w-1/5 h-4 rounded-full "></div>
+      <SectionContainer className="px-2">
+        <div className="flex justify-end my-24">
+          <div className="w-2/5 flex gap-4">
+            <div className="border-2 border-blue-mute w-1/5 h-4 rounded-full "></div>
+            <div className="bg-blue-mute w-4/5 h-4 rounded-full"></div>
+          </div>
         </div>
 
-        <p className="text-center py-10 text-3xl font-bold text-black lg:text-4xl">
-          Our Past <br /> Events
+        <p className="text-center text-3xl font-black lg:text-4xl">
+          What are <br /> Google Developer Student Clubs?
+        </p>
+
+        <div className="flex flex-col-reverse items-center justify-center gap-14 mt-16 lg:flex-row">
+          <p className="max-w-md">
+            <span className="font-bold">
+              Google Developer Student Clubs (GDSC)
+            </span>{" "}
+            are community groups for college and university students interested
+            in Google developer technologies. By joining a GDSC, students grow
+            their knowledge in a peer-to-peer learning environment and build
+            solutions for local businesses and their community.
+          </p>
+
+          <div className="w-full max-w-2xl aspect-video">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/UGE13GR9_CU?si=Y-uBJ_So_sAf-hCh"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer className="px-2">
+        <div className="w-2/4 flex gap-4 my-24">
+          <div className="bg-red-mute w-4/5 h-4 rounded-full"></div>
+          <div className="border-2 border-red-mute w-1/5 h-4 rounded-full "></div>
+        </div>
+
+        <p className="text-center text-3xl font-bold text-black lg:text-4xl">
+          Our Recent Events
         </p>
 
         {!recentEventScrapedContent && <p>Failed to fetch data.</p>}
         {recentEventScrapedContent && (
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 my-12">
             {recentEventScrapedContent.events.map((event, index) => (
               <div
                 key={index}
@@ -93,51 +136,25 @@ export default async function Home() {
             ))}
           </div>
         )}
-      </SectionContainer>
-
-      <SectionContainer>
-        <div className="flex justify-end">
-          <div className="w-2/5 flex gap-4">
-            <div className="border-2 border-blue w-1/5 h-4 rounded-full "></div>
-            <div className="bg-blue w-4/5 h-4 rounded-full"></div>
-          </div>
-        </div>
-
-        <p className="text-center py-10 text-3xl font-black lg:text-4xl">
-          What are <br /> Google Developer Student Clubs?
-        </p>
-
-        <div className="flex flex-col-reverse items-center justify-center gap-14 py-16 lg:flex-row">
-          <p className="text-center max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-
-          <div className="w-full max-w-md aspect-video">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/UGE13GR9_CU?si=Y-uBJ_So_sAf-hCh"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
+        <div className="text-center">
+          <Link href={"/events"}>
+            <Button className="bg-red" size="lg">
+              Event Highlights
+            </Button>
+          </Link>
         </div>
       </SectionContainer>
 
-      <SectionContainer>
-        <div className="w-2/5 flex gap-4">
-          <div className="bg-green w-4/5 h-4 rounded-full"></div>
-          <div className="border-2 border-green w-1/5 h-4 rounded-full "></div>
+      <SectionContainer className="px-2">
+        <div className="w-2/5 flex ml-auto gap-4 my-24 ">
+          <div className="border-2 border-green-mute w-1/5 h-4 rounded-full "></div>
+          <div className="bg-green-mute w-4/5 h-4 rounded-full"></div>
         </div>
 
-        <div className="flex flex-col items-center gap-10 py-10">
+        <div className="flex flex-col items-center gap-10">
           <p className="text-center text-3xl font-black lg:text-4xl">
-            GDSC USeP Obrero is official <br /> DataCamp Donates Partner
+            GDSC USeP Obrero is an official <br />{" "}
+            <span className="text-[#03ef64]">DataCamp Donates</span> Partner
           </p>
 
           <p className="text-center max-w-xl">
@@ -151,34 +168,45 @@ export default async function Home() {
             <Image src={GDSC} width={300} alt="GDSC"></Image>
           </div>
 
-          <Button className="bg-red">Learn More</Button>
+          <Link href={"https://datacamp.com/donates"} target="_blank">
+            <Button className="bg-green" size="lg">
+              Learn More About DataCamp Donates
+            </Button>
+          </Link>
         </div>
       </SectionContainer>
 
-      <SectionContainer>
-        <div className="flex justify-end">
-          <div className="w-2/5 flex gap-4">
-            <div className="border-2 border-yellow w-1/5 h-4 rounded-full"></div>
-            <div className="bg-yellow w-4/5 h-4 rounded-full"></div>
+      <SectionContainer className="px-2">
+        <div className="flex justify-end my-24">
+          <div className="w-2/5 flex gap-4 mr-auto">
+            <div className="bg-yellow-mute w-4/5 h-4 rounded-full"></div>
+            <div className="border-2 border-yellow-mute w-1/5 h-4 rounded-full"></div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-10 py-10">
-          <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-20">
-            <p className="text-center text-3xl font-black lg:text-4xl">
-              Join Our <br /> Community!
-            </p>
-            <Image src={Join} width={500} alt="GDSC"></Image>
-          </div>
+        <div className="flex flex-col items-center gap-10">
+          <p className="text-center text-3xl font-black lg:text-4xl">
+            Join Our Community!
+          </p>
+          <Image src={Join} width={1000} alt="GDSC"></Image>
 
-          <p className="text-center max-w-md">
+          <p className="text-center max-w-2xl">
             Join GDSC USEP Obrero today and become part of a vibrant community
             that is driven by curiosity, collaboration, and a shared love for
             technology. Together, we&apos;l explore new frontiers, create
             innovative solutions, and make a positive impact in the world.
           </p>
 
-          <Button className="bg-yellow">Meet the Team</Button>
+          <Link
+            href={
+              "https://gdsc.community.dev/university-of-southeastern-philippines-davao-philippines"
+            }
+            target="_blank"
+          >
+            <Button className="bg-yellow" size="lg">
+              Join us on Bevy!
+            </Button>
+          </Link>
         </div>
       </SectionContainer>
     </main>
