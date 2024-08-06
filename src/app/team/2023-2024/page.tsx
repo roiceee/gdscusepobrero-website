@@ -1,201 +1,14 @@
 import DropDown from "@/components/drop-down";
 import OfficerCard from "@/components/officer-card";
 import SectionContainer from "@/containers/SectionContainer";
-
-const lead: OfficerType = {
-  name: "John Roice Aldeza",
-  position: "Lead",
-  imageSrc: "https://via.placeholder.com/150",
-  links: {
-    website: "https://roice.xyz",
-    linkedin: "https://www.linkedin.com/in/johnroicealdeza/",
-    github: "https://github.com/roiceee",
-  },
-};
-
-const technology: OfficerType[] = [
-  {
-    name: "Alexander Vaugn Villasis",
-    position: "Chief Technology Officer",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Kent Cyril Bordios",
-    position: "Data Science Lead",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Jaime Emmanuel Lucero",
-    position: "Design Lead",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Philip Greg Candelario",
-    position: "Engineering Lead",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-];
-
-const creatives: OfficerType[] = [
-  {
-    name: "Keziah Mariz Bante",
-    position: "Chief Creatives Officer",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Karla Katrina Leduna",
-    position: "Documentations Manager",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Vincent Dialing",
-    position: "Branding Manager",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Giverphine Dejiga",
-    position: "Promotions Manager",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Reymart Manaytay",
-    position: "Branding Manager",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-];
-
-const finance: OfficerType[] = [
-  {
-    name: "Rey Helorentino",
-    position: "Chief Finance Officer",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Kimzie Torres",
-    position: "Partnership Manager",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-];
-
-const operations: OfficerType[] = [
-  {
-    name: "Yman Rey Fernandez",
-    position: "Chief Operations Officer",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-
-  {
-    name: "Jivin Java",
-    position: "Logistics Manager",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Prince Paolo Arieta",
-    position: "Communications Manager",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Krishna Laureto",
-    position: "Secretary",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-  {
-    name: "Lindsay Cañete",
-    position: "Events Manager",
-    imageSrc: "https://via.placeholder.com/150",
-    links: {
-      website: "",
-      linkedin: "",
-      github: "",
-    },
-  },
-];
-
-const adviser: OfficerType = {
-  name: "Nancy Mozo",
-  position: "Adviser",
-  imageSrc: "https://via.placeholder.com/150",
-  links: {
-    website: "",
-    linkedin: "",
-    github: "",
-  },
-};
+import {
+  lead,
+  technology,
+  creatives,
+  finance,
+  operations,
+  adviser,
+} from "@/data/officers/secondTerm";
 
 export default function Page() {
   return (
@@ -251,7 +64,7 @@ export default function Page() {
               marketing, advertising, and multimedia projects.
             </h2>
           </div>
-          <div className="flex gap-[24px] flex-wrap mx-auto justify-center max-w-[700px]">
+          <div className="flex gap-[24px] flex-wrap mx-auto justify-center max-w-[800px]">
             {creatives.map((officer, index) => (
               <OfficerCard key={"creative-" + index} data={officer} />
             ))}
@@ -292,7 +105,7 @@ export default function Page() {
               positive organizational culture.
             </h2>
           </div>
-          <div className="flex gap-[24px] flex-wrap mx-auto justify-center max-w-[700px]">
+          <div className="flex gap-[24px] flex-wrap mx-auto justify-center max-w-[800px]">
             {operations.map((officer, index) => (
               <OfficerCard key={"operations-" + index} data={officer} />
             ))}
