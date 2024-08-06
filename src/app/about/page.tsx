@@ -15,12 +15,12 @@ const data: { name: string; url: string; imageSrc: string }[] = [
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Alexander Vaugn Villasis",
+    name: "Kimzie Torres",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Kimzie Torres",
+    name: "Alexander Vaugn Villasis",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
@@ -30,12 +30,12 @@ const data: { name: string; url: string; imageSrc: string }[] = [
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Keziah Bante",
+    name: "Keziah Mariz Bante",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Jib Java",
+    name: "Jivin Java",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
@@ -113,7 +113,7 @@ export default function Page() {
           <div className="border-blue border-2 h-5 rounded-full w-[50px]"></div>
         </div>
 
-        <section className="mt-12">
+        <section>
           <h2 className="font-semibold text-xl mb-4">Website Team</h2>
           <p>
             Our sincere thanks to the following individuals for contributing to
