@@ -117,7 +117,6 @@ export default async function Home() {
                     width={200}
                     height={200}
                     className="rounded-full"
-                    placeholder="blur"
                   />
                 </Link>
                 <div className="text-center">
