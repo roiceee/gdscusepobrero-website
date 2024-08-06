@@ -1,41 +1,42 @@
 import SectionContainer from "@/containers/SectionContainer";
-import cover from "/public/images/about-cover.jpg";
+
 import Image from "next/image";
 import Link from "next/link";
+import cover from "/public/images/about-cover.png";
 
 const data: { name: string; url: string; imageSrc: string }[] = [
   {
-    name: "John Doe",
+    name: "John Roice Aldeza",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Jane Doe",
+    name: "Vincent Dialing",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Juan Dela Cruz",
+    name: "Kimzie Torres",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Maria Clara",
+    name: "Alexander Vaugn Villasis",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Pedro Penduko",
+    name: "Jaime Emanuel Lucero",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Juan Tamad",
+    name: "Keziah Mariz Bante",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
   {
-    name: "Maria Makiling",
+    name: "Jivin Java",
     url: "#",
     imageSrc: "/images/placeholder.jpg",
   },
@@ -44,10 +45,10 @@ const data: { name: string; url: string; imageSrc: string }[] = [
 export default function Page() {
   return (
     <main>
-      <SectionContainer>
+      <SectionContainer className="px-2">
         <h1 className="text-4xl font-bold text-center">About</h1>
 
-        <section className="my-6">
+        {/* <section className="my-6">
           <Image
             src={cover}
             height={400}
@@ -55,13 +56,35 @@ export default function Page() {
             alt=""
             className="rounded-xl"
           />
-        </section>
+        </section> */}
 
         <section className="mt-12">
-          <h2 className="font-semibold text-2xl mb-4">
-            What is GDSC USeP Obrero?
-          </h2>
-          <p>
+          <div className="flex items-center justify-start gap-3">
+            <div className="bg-yellow w-1/2 lg:w-1/3 h-5 rounded-full"></div>
+            <div className=" border-yellow border-2 h-5 rounded-full w-[50px]"></div>
+          </div>
+
+          <div className="lg:flex items-center my-4">
+            <h2 className="font-semibold text-3xl lg:text-5xl lg:text-center">
+              What is <span className="text-red">G</span>
+              <span className="text-blue">D</span>
+              <span className="text-yellow">S</span>
+              <span className="text-green">C</span> USeP Obrero?
+            </h2>
+            <Image
+              src={cover}
+              width={800}
+              alt=""
+              className="rounded-xl h-auto w-full"
+            />
+          </div>
+
+          <div className="flex items-center justify-end gap-4">
+            <div className=" border-green border-2 h-5 rounded-full w-[50px]"></div>
+            <div className="bg-green w-full lg:w-1/2 h-5 rounded-full"></div>
+          </div>
+
+          <p className="mt-8">
             <span className="font-bold">
               Google Developer Student Clubs USeP Obrero
             </span>{" "}
@@ -86,16 +109,19 @@ export default function Page() {
           </ul>
         </section>
 
-        <section className="mt-12">
-          <h2 className="font-semibold text-xl mb-4">
-            Website Development Team
-          </h2>
+        <div className="flex justify-start items-center gap-4">
+          <div className="bg-blue w-1/2 lg:w-1/3 rounded-full h-5 my-12"></div>
+          <div className="border-blue border-2 h-5 rounded-full w-[50px]"></div>
+        </div>
+
+        <section>
+          <h2 className="font-semibold text-xl mb-4">Website Team</h2>
           <p>
             Our sincere thanks to the following individuals for contributing to
             this website:
           </p>
 
-          <div className="flex gap-4">
+          <div className="sm:flex gap-4 flex-wrap">
             {data.map((member, index) => (
               <div
                 key={index}

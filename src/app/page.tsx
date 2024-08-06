@@ -1,6 +1,7 @@
 import SectionContainer from "@/containers/SectionContainer";
 import { Button } from "@/components/client-wrapper";
 import Image from "next/image";
+
 import WhatareGDSC from "../../public/images/whataregdsc.png";
 import DataCamp from "../../public/images/datacamp.png";
 import GDSC from "../../public/images/gdsc-centered.png";
@@ -17,6 +18,7 @@ export default async function Home() {
 
   const linkToBevy =
     "https://gdsc.community.dev/university-of-southeastern-philippines-davao-philippines/";
+
 
   return (
     <main>

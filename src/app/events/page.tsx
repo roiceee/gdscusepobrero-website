@@ -1,13 +1,14 @@
 import { Button } from "@/components/client-wrapper";
+import Gallery from "@/components/gallery";
 import SectionContainer from "@/containers/SectionContainer";
+import Image from "next/image";
 import Link from "next/link";
 import ScrapedEventType from "../../types/scrapedEventType";
-import Image from "next/image";
-import { NextResponse } from "next/server";
-import Gallery from "@/components/gallery";
 
 export default async function Page() {
-  const res = await fetch(`${process.env.APP_URL}/api/events`);
+  const res = await fetch(`${process.env.APP_URL}/api/events`, {
+    cache: "no-store",
+  });
 
   const recentEventScrapedContent:
     | { status: number; events: ScrapedEventType[] }
@@ -31,7 +32,12 @@ export default async function Page() {
           </Link>
         </section>
 
-        <section className="py-16">
+        <div className="flex justify-start gap-4 items-center">
+          <div className="bg-red-mute bg-opacity-65 w-1/2 lg:w-1/3 h-5 my-8 rounded-full"></div>
+          <div className="bg-red bg-opacity-65 w-[30px] h-5 rounded-full"></div>
+        </div>
+
+        <section>
           <h2 className="text-2xl mb-8 font-semibold">Recent Events</h2>
           {!recentEventScrapedContent && <p>Failed to fetch data.</p>}
           {recentEventScrapedContent && (
@@ -82,7 +88,12 @@ export default async function Page() {
           </div>
         </section>
 
-        <section className="py-16">
+        <div className="flex justify-end gap-4 items-center">
+          <div className="bg-yellow bg-opacity-65 w-[30px] h-5 rounded-full"></div>
+          <div className="bg-yellow-mute bg-opacity-65 w-1/2 lg:w-1/3 h-5 my-8 rounded-full"></div>
+        </div>
+
+        <section>
           <h2 className="text-2xl mb-8 font-semibold">Event Highlights</h2>
           <Gallery />
         </section>

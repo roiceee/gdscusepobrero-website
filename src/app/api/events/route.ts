@@ -23,12 +23,12 @@ export async function GET() {
         event.find("a").attr("href") ||
         "https://gdsc.community.dev/university-of-southeastern-philippines-davao-philippines/";
       const imageUrl = event.find("img").attr("src") || "#";
-      const details = event.find(".dynamic-text");
+      const details = event.find("u");
 
-      const date = details.eq(0).text().trim() || "";
+      const date = details.eq(1).text().trim() || "";
       const type = details.eq(1).text().trim() || "";
-      const name = details.eq(2).text().trim() || "";
-      const location = details.eq(3).text().trim() || "";
+      const name = details.eq(1).text().trim() || "";
+      const location = details.eq(2).text().trim() || "";
 
       // Push the event only if it has a name and type to avoid duplicates
 
@@ -41,6 +41,8 @@ export async function GET() {
         imageUrl,
       });
     });
+
+    console.log(events);
 
     // Assign the correct imageUrl to the correct event
     if (events.length >= 8) {
@@ -56,6 +58,7 @@ export async function GET() {
     } else {
       return NextResponse.json({ status: 200, events: events });
     }
+
   } catch (error) {
     console.error(error);
     return NextResponse.json({
