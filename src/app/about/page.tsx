@@ -1,5 +1,5 @@
 import SectionContainer from "@/containers/SectionContainer";
-import cover from "public/images/about-cover.jpg";
+import cover from "/public/images/about-cover.jpg";
 import Image from "next/image";
 import Link from "next/link";
 

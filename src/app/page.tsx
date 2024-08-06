@@ -5,8 +5,19 @@ import WhatareGDSC from "../../public/images/whataregdsc.png";
 import DataCamp from "../../public/images/datacamp.png";
 import GDSC from "../../public/images/gdsc-centered.png";
 import Join from "../../public/images/JoinOurCommunity.png";
+import ScrapedEventType from "@/types/scrapedEventType";
+import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch(`${process.env.APP_URL}/api/events`);
+
+  const recentEventScrapedContent:
+    | { status: number; events: ScrapedEventType[] }
+    | undefined = await res.json();
+
+  const linkToBevy =
+    "https://gdsc.community.dev/university-of-southeastern-philippines-davao-philippines/";
+
   return (
     <main>
       <SectionContainer>
@@ -31,15 +42,55 @@ export default function Home() {
         </div>
       </SectionContainer>
 
-      <SectionContainer>
+      <SectionContainer className="mb-12">
         <div className="w-2/4 flex gap-4">
           <div className="bg-red w-4/5 h-4 rounded-full"></div>
           <div className="border-2 border-red w-1/5 h-4 rounded-full "></div>
         </div>
 
-        <p className="text-center py-10 text-3xl font-black lg:text-4xl">
+        <p className="text-center py-10 text-3xl font-bold text-black lg:text-4xl">
           Our Past <br /> Events
         </p>
+
+        {!recentEventScrapedContent && <p>Failed to fetch data.</p>}
+        {recentEventScrapedContent && (
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {recentEventScrapedContent.events.map((event, index) => (
+              <div
+                key={index}
+                className="text-center flex flex-col justify-start items-center gap-6"
+              >
+                <Link
+                  href={event.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    priority
+                    src={event.imageUrl}
+                    alt={event.name}
+                    width={200}
+                    height={200}
+                    className="rounded-full"
+                  />
+                </Link>
+                <div className="text-center">
+                  <Link
+                    href={event.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <h3 className="text-lg font-bold hover:underline">
+                      {event.name}
+                    </h3>
+                  </Link>
+
+                  <p className="text-sm">{event.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </SectionContainer>
 
       <SectionContainer>
