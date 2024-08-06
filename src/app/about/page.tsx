@@ -1,44 +1,51 @@
 import SectionContainer from "@/containers/SectionContainer";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import cover from "/public/images/about-cover.png";
+import roice from "/public/images/team/2023-2024/roice.jpg";
+import vincent from "/public/images/team/2023-2024/vince.jpg";
+import kimzie from "/public/images/team/2023-2024/kimzie.jpg";
+import alexander from "/public/images/team/2023-2024/alex.webp";
+import jaime from "/public/images/team/2023-2024/jaime.webp";
+import keziah from "/public/images/team/2023-2024/kez.webp";
+import jivin from "/public/images/team/2023-2024/jib.webp";
 
-const data: { name: string; url: string; imageSrc: string }[] = [
+const data: { name: string; url: string; imageSrc: StaticImageData }[] = [
   {
     name: "John Roice Aldeza",
-    url: "#",
-    imageSrc: "/images/placeholder.jpg",
+    url: "https://github.com/roiceee",
+    imageSrc: roice,
   },
   {
     name: "Vincent Dialing",
-    url: "#",
-    imageSrc: "/images/placeholder.jpg",
+    url: "https://www.behance.net/vincentdialing",
+    imageSrc: vincent,
   },
   {
     name: "Kimzie Torres",
-    url: "#",
-    imageSrc: "/images/placeholder.jpg",
+    url: "https://github.com/kimzii",
+    imageSrc: kimzie,
   },
   {
     name: "Alexander Vaugn Villasis",
-    url: "#",
-    imageSrc: "/images/placeholder.jpg",
-  },
-  {
-    name: "Jaime Emanuel Lucero",
-    url: "#",
-    imageSrc: "/images/placeholder.jpg",
+    url: "https://github.com/dAjiee",
+    imageSrc: alexander,
   },
   {
     name: "Keziah Mariz Bante",
-    url: "#",
-    imageSrc: "/images/placeholder.jpg",
+    url: "https://www.behance.net/keziahbante",
+    imageSrc: keziah,
+  },
+  {
+    name: "Jaime Emanuel Lucero",
+    url: "https://github.com/JaimeLucero",
+    imageSrc: jaime,
   },
   {
     name: "Jivin Java",
-    url: "#",
-    imageSrc: "/images/placeholder.jpg",
+    url: "https://github.com/jivinn",
+    imageSrc: jivin,
   },
 ];
 
@@ -121,7 +128,7 @@ export default function Page() {
             this website:
           </p>
 
-          <div className="sm:flex gap-4 flex-wrap">
+          <div className="grid grid-cols-2 sm:flex gap-4 flex-wrap">
             {data.map((member, index) => (
               <div
                 key={index}
