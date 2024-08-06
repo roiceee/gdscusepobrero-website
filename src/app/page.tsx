@@ -1,123 +1,185 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
+import SectionContainer from "@/containers/SectionContainer";
+import { Button } from "@/components/client-wrapper";
 import Image from "next/image";
-import JoinOurCommunity from "../../public/images/JoinOurCommunity.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/swiper-bundle.css';
-import "swiper/css/effect-coverflow";
-import { EffectCoverflow } from "swiper/modules";
-import { Swiper as SwiperType } from 'swiper/types';
-import SectionContainer from '@/containers/SectionContainer';
 
-const events = [
-  {
-    image: JoinOurCommunity,
-    title: 'Info-Session 2023',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    image: JoinOurCommunity,
-    title: 'Event 2',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  {
-    image: JoinOurCommunity,
-    title: 'Event 3',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-];
+import WhatareGDSC from "../../public/images/whataregdsc.png";
+import DataCamp from "../../public/images/datacamp.png";
+import GDSC from "../../public/images/gdsc-centered.png";
+import Join from "../../public/images/JoinOurCommunity.png";
+import ScrapedEventType from "@/types/scrapedEventType";
+import Link from "next/link";
 
+export default async function Home() {
+  const res = await fetch(`${process.env.APP_URL}/api/events`);
 
+  const recentEventScrapedContent:
+    | { status: number; events: ScrapedEventType[] }
+    | undefined = await res.json();
 
-export default function Home() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const linkToBevy =
+    "https://gdsc.community.dev/university-of-southeastern-philippines-davao-philippines/";
 
-  const handleSlideChange = (swiper: SwiperType) => {
-    setActiveIndex(swiper.activeIndex);
-  };
-
-  const [slidesPerView, setSlidesPerView] = useState(1.6);
-
-  const handleResize = () => {
-    const width = window.innerWidth;
-    if (width >= 1024) {
-      setSlidesPerView(2);
-    } else if (width >= 768) {
-      setSlidesPerView(2.4);
-    } else {
-      setSlidesPerView(1.6);
-    }
-  };
-
-  useEffect(() => {
-    handleResize(); // Set initial value based on current width
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
-    <main className="flex flex-col items-center justify-center bg-gray bg-opacity-10">
-
-      <SectionContainer className="bg-white w-full pt-8 md: shadow-[0_1px_8px_rgba(0,0,0,0.25)]">
-        <div className="px-6 flex flex-col items-end justify-end gap-4 w-full bg-cover bg-no-repeat bg-bottom-right bg-[60%] h-[80vh] md:bg-contain md:bg-[0%]" style={{backgroundImage: 'url(/images/eagle.png)'}}>
-          <div className="flex flex-col text-right text-2xl xl:text-3xl  font-extrabold">  
-            <span style={{textShadow: "1px 1px #f28b82"}}>Grow.</span>
-            <span style={{textShadow: "1px 1px #FDE293"}}>Learn.</span>
-            <span style={{textShadow: "1px 1px #81C995"}}>Connect.</span>
+    <main>
+      <SectionContainer>
+        <div
+          className="px-2 flex flex-col items-end justify-end gap-4 w-full bg-cover bg-no-repeat bg-bottom-right bg-[90%] h-[80vh] md:bg-contain md:bg-[-140%]  xl:bg-[-90%]"
+          style={{ backgroundImage: "url(/images/eagle.png)" }}
+        >
+          <div className="flex flex-col text-right text-2xl xl:text-3xl  font-extrabold">
+            <span>Grow</span>
+            <span>Learn</span>
+            <span>Connect</span>
           </div>
-          
-          <p className="w-2/5 md:w-[200px] lg:w-[260px] text-xs xl:text-sm text-right">The GDSC USeP Obrero is part of a global community run by students from USeP Obrero.</p>
+
+          <p className="w-2/5 md:w-[200px] lg:w-[260px] text-xs xl:text-sm text-right">
+            The <b>GDSC USeP Obrero</b> is part of a global community run by
+            students from USeP Obrero.
+          </p>
 
           <div className="flex justify-end pb-6">
-            <button className="border-2 border-blue bg-blue-mute bg-opacity-25 px-4 py-1 rounded-lg text-blue text-xs">About Us</button>
+            <Button className="bg-blue">About Us</Button>
           </div>
-          
         </div>
       </SectionContainer>
 
-      <SectionContainer className="w-full flex flex-col items-center">
-        <p className="text-center text-xl font-bold pt-16 pb-6">Previous Events</p>
-        <div className="w-full flex flex-col items-center gap-4 max-w-screen-md">
-          <Swiper
-            className="w-full"
-            spaceBetween={20} slidesPerView={slidesPerView}
-            centeredSlides={true} 
-            effect={'coverflow'}
-            coverflowEffect={{
-              rotate:0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2.5
-            }}
-            modules={[EffectCoverflow]}
-            onSlideChange={handleSlideChange}
-          >
-            {events.map((event, index) => (
-              <SwiperSlide key={index}>
-                <Image src={event.image} alt={`Slide ${index + 1}`}/>
-              </SwiperSlide>
+      <SectionContainer className="mb-12">
+        <div className="w-2/4 flex gap-4">
+          <div className="bg-red w-4/5 h-4 rounded-full"></div>
+          <div className="border-2 border-red w-1/5 h-4 rounded-full "></div>
+        </div>
+
+        <p className="text-center py-10 text-3xl font-bold text-black lg:text-4xl">
+          Our Past <br /> Events
+        </p>
+
+        {!recentEventScrapedContent && <p>Failed to fetch data.</p>}
+        {recentEventScrapedContent && (
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+            {recentEventScrapedContent.events.map((event, index) => (
+              <div
+                key={index}
+                className="text-center flex flex-col justify-start items-center gap-6"
+              >
+                <Link
+                  href={event.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    priority
+                    src={event.imageUrl}
+                    alt={event.name}
+                    width={200}
+                    height={200}
+                    className="rounded-full"
+                  />
+                </Link>
+                <div className="text-center">
+                  <Link
+                    href={event.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <h3 className="text-lg font-bold hover:underline">
+                      {event.name}
+                    </h3>
+                  </Link>
+
+                  <p className="text-sm">{event.location}</p>
+                </div>
+              </div>
             ))}
-          </Swiper>
-          <div className="mt-4 text-center w-4/5 max-w-[400px]">
-            <p className='text-lg font-bold'>{events[activeIndex].title}</p>
-            <p className='text-xs'>{events[activeIndex].description}</p>
           </div>
-        </div>
-        <button className="my-20 border-2 border-green bg-green-mute bg-opacity-25 px-4 py-1 rounded-lg text-green text-xs">Meet the Team</button>
+        )}
       </SectionContainer>
 
-      <SectionContainer className="w-full bg-white shadow-[0_1px_8px_rgba(0,0,0,0.25)] py-10 flex flex-col items-center gap-4">
-        <p className="text-xl font-bold">Join our Community</p>
-        <div className="w-4/5 md:max-w-[380px] lg:max-w-[500px] flex flex-col gap-8">
-          <div className="p-4">
-            <Image src={JoinOurCommunity} alt="Join Our Community"/>
+      <SectionContainer>
+        <div className="flex justify-end">
+          <div className="w-2/5 flex gap-4">
+            <div className="border-2 border-blue w-1/5 h-4 rounded-full "></div>
+            <div className="bg-blue w-4/5 h-4 rounded-full"></div>
           </div>
-          <p className="text-center text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        <button className="mt-6 border-2 border-yellow bg-yellow-mute bg-opacity-25 px-4 py-1 rounded-lg text-yellow text-xs">Meet the Team</button>
+
+        <p className="text-center py-10 text-3xl font-black lg:text-4xl">
+          What are <br /> Google Developer Student Clubs?
+        </p>
+
+        <div className="flex flex-col-reverse items-center justify-center gap-14 py-16 lg:flex-row">
+          <p className="text-center max-w-md">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+
+          <div className="w-full max-w-md aspect-video">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/UGE13GR9_CU?si=Y-uBJ_So_sAf-hCh"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer>
+        <div className="w-2/5 flex gap-4">
+          <div className="bg-green w-4/5 h-4 rounded-full"></div>
+          <div className="border-2 border-green w-1/5 h-4 rounded-full "></div>
+        </div>
+
+        <div className="flex flex-col items-center gap-10 py-10">
+          <p className="text-center text-3xl font-black lg:text-4xl">
+            GDSC USeP Obrero is official <br /> DataCamp Donates Partner
+          </p>
+
+          <p className="text-center max-w-xl">
+            Explore how our joint efforts are driving change and making a real
+            difference. Together, we&apos;re transforming lives and communities.
+          </p>
+
+          <div className="flex flex-col justify-center items-center gap-10 py-10 w-4/5 md:flex-row">
+            <Image src={DataCamp} width={300} alt="DataCamp"></Image>
+            <span className="text-xl">X</span>
+            <Image src={GDSC} width={300} alt="GDSC"></Image>
+          </div>
+
+          <Button className="bg-red">Learn More</Button>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer>
+        <div className="flex justify-end">
+          <div className="w-2/5 flex gap-4">
+            <div className="border-2 border-yellow w-1/5 h-4 rounded-full"></div>
+            <div className="bg-yellow w-4/5 h-4 rounded-full"></div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-10 py-10">
+          <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-20">
+            <p className="text-center text-3xl font-black lg:text-4xl">
+              Join Our <br /> Community!
+            </p>
+            <Image src={Join} width={500} alt="GDSC"></Image>
+          </div>
+
+          <p className="text-center max-w-md">
+            Join GDSC USEP Obrero today and become part of a vibrant community
+            that is driven by curiosity, collaboration, and a shared love for
+            technology. Together, we&apos;l explore new frontiers, create
+            innovative solutions, and make a positive impact in the world.
+          </p>
+
+          <Button className="bg-yellow">Meet the Team</Button>
+        </div>
       </SectionContainer>
     </main>
   );

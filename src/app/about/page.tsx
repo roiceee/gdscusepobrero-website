@@ -1,4 +1,5 @@
 import SectionContainer from "@/containers/SectionContainer";
+
 import Image from "next/image";
 import Link from "next/link";
 import cover from "/public/images/about-cover.png";

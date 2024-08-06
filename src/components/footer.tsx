@@ -1,9 +1,10 @@
 import Image from "next/image";
-import gdscCentered from "../../public/images/gdsc-long.png";
-import fb from "../../public/images/fb.svg";
-import linkedIn from "../../public/images/linkedIn.svg";
-import mail from "../../public/images/mail.svg";
-import web from "../../public/images/web.svg";
+import gdscCentered from "/public/images/gdsc-long.png";
+import fb from "/public/images/fb.svg";
+import linkedIn from "/public/images/linkedIn.svg";
+import mail from "/public/images/mail.svg";
+import web from "/public/images/web.svg";
+
 import Link from "next/link";
 import footerColors from "/public/images/footer-colors.png";
 
