@@ -1,13 +1,11 @@
-import DropDown from "@/components/drop-down";
 import OfficerCard from "@/components/officer-card";
-import SectionContainer from "@/containers/SectionContainer";
 import {
-  lead,
-  technology,
+  adviser,
   creatives,
   finance,
+  lead,
   operations,
-  adviser,
+  technology,
 } from "@/data/officers/secondTerm";
 
 export default function Page() {
