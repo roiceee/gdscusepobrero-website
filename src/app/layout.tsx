@@ -1,10 +1,9 @@
-import { ThemeProvider } from "@/components/client-wrapper";
 import Footer from "@/components/footer";
 import { StickyNavbar } from "@/components/navbar";
 import type { Metadata } from "next";
 import googleSans from "next/font/local";
 import "../css/globals.css";
-import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react"
 
 const googlesans = googleSans({
   src: "../../public/fonts/googlesans-regular.woff2",
@@ -31,6 +30,7 @@ export default function RootLayout({
           <StickyNavbar />
           <div className="flex-grow my-8">{children}</div>
           <Footer />
+          <Analytics/>
         </body>
       </html> 
     
