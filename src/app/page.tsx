@@ -190,7 +190,7 @@ export default async function Home() {
           <Image src={Join} width={1000} alt="GDSC" placeholder="blur"></Image>
 
           <p className="text-center max-w-2xl">
-            Join GDSC USEP Obrero today and become part of a vibrant community
+            Join GDSC USeP Obrero today and become part of a vibrant community
             that is driven by curiosity, collaboration, and a shared love for
             technology. Together, we&apos;l explore new frontiers, create
             innovative solutions, and make a positive impact in the world.
