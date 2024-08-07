@@ -1,10 +1,22 @@
+import { EmailIcon, LocationOnIcon } from "@/components/client-wrapper";
 import SectionContainer from "@/containers/SectionContainer";
-import {
-  PhoneInTalkIcon,
-  EmailIcon,
-  LocationOnIcon,
-} from "@/components/client-wrapper";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Contact - Google Developer Student Clubs USeP Obrero",
+  description:
+    "Contact GDSC USeP Obrero for inquiries, collaborations, and sponsorships.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://gdscusep.com/contact",
+    siteName: "Contact - Google Developer Student Clubs USeP Obrero",
+    title: "Contact - Google Developer Student Clubs USeP Obrero",
+    description:
+      "Contact GDSC USeP Obrero for inquiries, collaborations, and sponsorships.",
+  },
+};
 
 const contactDetails = [
   {
