@@ -44,6 +44,16 @@ export const metadata: Metadata = {
     "Growth",
   ],
   robots: "index, follow",
+  openGraph: {
+    images: [
+      {
+        url: "https://gdscusep.com/images/gdsc.png",
+        width: 1000,
+        height: 484,
+        alt: "GDSC USeP Obrero",
+      },
+    ]
+  }
 };
 
 export default function RootLayout({
