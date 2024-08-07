@@ -22,7 +22,7 @@ export default async function Home() {
     <main>
       <SectionContainer>
         <div
-          className="px-2 mr-6 flex flex-col items-end justify-end bg-cover md:bg-contain bg-no-repeat h-[60vh] bg-[90%] sm:bg-[120%] md:bg-[-70%] lg:bg-[-30%]"
+          className=" path px-2 mr-6 flex flex-col items-end justify-end bg-cover bg-clip-border md:bg-contain bg-no-repeat h-[60vh] bg-[90%] sm:bg-[120%] md:bg-[-70%] lg:bg-[-30%]"
           style={{ backgroundImage: "url(/images/eagle.png)" }}
         >
           <Image
@@ -161,7 +161,7 @@ export default async function Home() {
               education to students in the University of Southeastern
               Philippines and beyond.
             </p>
-            <div className="flex flex-col justify-center items-center gap-10py-10 w-4/5 md:flex-row">
+            <div className="flex flex-col justify-center items-center gap-10 py-10 w-4/5 md:flex-row">
               <Image src={DataCamp} width={300} alt="DataCamp" placeholder="blur"></Image>
               <span className="text-xl">X</span>
               <Image src={GDSC} width={300} alt="GDSC" placeholder="blur"></Image>
