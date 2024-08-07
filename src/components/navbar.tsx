@@ -72,7 +72,7 @@ export function StickyNavbar({}) {
   );
 
   return (
-    <Navbar className="sticky top-0 z-10 max-w-full rounded-none px-4 lg:px-8 lg:py-4">
+    <Navbar className="sticky top-0 z-50 max-w-full rounded-none px-4 lg:px-8 lg:py-4">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between text-blue-gray-900">
           <div>

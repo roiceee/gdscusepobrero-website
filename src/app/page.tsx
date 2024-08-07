@@ -8,6 +8,7 @@ import DataCamp from "../../public/images/datacamp.png";
 import GDSC from "../../public/images/gdsc-centered.png";
 import Join from "../../public/images/about-cover.png";
 import logo from "/public/images/gdsc.png";
+import eagle from "/public/images/eagle.png";
 
 export default async function Home() {
   const res = await fetch(`${process.env.APP_URL}/api/events`, {
@@ -22,16 +23,26 @@ export default async function Home() {
     <main>
       <SectionContainer>
         <div
-          className=" path px-2 mr-6 flex flex-col items-end justify-end bg-cover bg-clip-border md:bg-contain bg-no-repeat h-[60vh] bg-[90%] sm:bg-[120%] md:bg-[-70%] lg:bg-[-30%]"
-          style={{ backgroundImage: "url(/images/eagle.png)" }}
+          className=" bg-[url(/images/eagle.png)] relative md:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat min-h-[60vh] bg-[90%] sm:bg-[120%] mt-12"
         >
+          <Image
+            src={eagle}
+            alt="USeP Eagle Statue"
+            className="absolute w-full object-cover md:object-contain md:object-left hidden md:block"
+            // 
+            fill
+            
+            placeholder="blur"
+            style={{left: "-100px"}}
+
+          />
           <Image
             src={logo}
             height={40}
             alt="GDSC Logo"
             className="hidden lg:block w-auto ml-auto self-start my-auto"
           />
-          <div className="text-right">
+          <div className="text-right z-10 h-fit">
             <div className="flex flex-col text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
               <span>Grow</span>
               <span>Learn</span>
@@ -162,9 +173,19 @@ export default async function Home() {
               Philippines and beyond.
             </p>
             <div className="flex flex-col justify-center items-center gap-10 py-10 w-4/5 md:flex-row">
-              <Image src={DataCamp} width={300} alt="DataCamp" placeholder="blur"></Image>
+              <Image
+                src={DataCamp}
+                width={300}
+                alt="DataCamp"
+                placeholder="blur"
+              ></Image>
               <span className="text-xl">X</span>
-              <Image src={GDSC} width={300} alt="GDSC" placeholder="blur"></Image>
+              <Image
+                src={GDSC}
+                width={300}
+                alt="GDSC"
+                placeholder="blur"
+              ></Image>
             </div>
             <Link href={"https://datacamp.com/donates"} target="_blank">
               <Button className="bg-green" size="lg">
