@@ -153,8 +153,9 @@ const finance: OfficerType[] = [
     position: "Partnership Manager",
     imageSrc: kimzie,
     links: {
+      facebook: "https://www.facebook.com/kreidiprinz/",
       website: "",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/kimzietorres/",
       github: "https://github.com/kimzii",
     },
   },
