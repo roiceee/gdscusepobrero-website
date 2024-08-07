@@ -4,6 +4,22 @@ import SectionContainer from "@/containers/SectionContainer";
 import Image from "next/image";
 import Link from "next/link";
 import ScrapedEventType from "../../types/scrapedEventType";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Events - Google Developer Student Clubs USeP Obrero",
+  description:
+    "Stay updated with the latest events from Google Developer Student Clubs USeP Obrero.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://gdscusep.com/events",
+    siteName: "Events - Google Developer Student Clubs USeP Obrero",
+    title: "Events - Google Developer Student Clubs USeP Obrero",
+    description:
+      "Stay updated with the latest events from Google Developer Student Clubs USeP Obrero.",
+  },
+};
 
 export default async function Page() {
   const res = await fetch(`${process.env.APP_URL}/api/events`, {

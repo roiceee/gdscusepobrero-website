@@ -22,19 +22,15 @@ export default async function Home() {
   return (
     <main>
       <SectionContainer>
-        <div
-          className=" bg-[url(/images/eagle.png)] relative md:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat min-h-[60vh] bg-[90%] sm:bg-[120%] mt-12"
-        >
+        <div className=" bg-[url(/images/eagle.png)] relative md:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat min-h-[60vh] bg-[90%] sm:bg-[120%] mt-12">
           <Image
             src={eagle}
             alt="USeP Eagle Statue"
             className="absolute w-full object-cover md:object-contain md:object-left hidden md:block"
-            // 
+            //
             fill
-            
             placeholder="blur"
-            style={{left: "-100px"}}
-
+            style={{ left: "-100px" }}
           />
           <Image
             src={logo}

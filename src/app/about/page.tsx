@@ -10,6 +10,21 @@ import alexander from "/public/images/team/2023-2024/alex.webp";
 import jaime from "/public/images/team/2023-2024/jaime.webp";
 import keziah from "/public/images/team/2023-2024/kez.webp";
 import jivin from "/public/images/team/2023-2024/jib.webp";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About - Google Developer Student Clubs USeP Obrero",
+  description:
+    "Google Developer Student Clubs USeP Obrero is an accredited student-run organization whose members are driven to learn Google developer technologies, improve skills in a peer-to-peer learning environment and foster a community of like-minded individuals who are passionate in technology, innovation, and growth.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://gdscusep.com/about",
+    siteName: "About - Google Developer Student Clubs USeP Obrero",
+    description:
+      "Google Developer Student Clubs USeP Obrero is an accredited student-run organization whose members are driven to learn Google developer technologies, improve skills in a peer-to-peer learning environment and foster a community of like-minded individuals who are passionate in technology, innovation, and growth.",
+  },
+};
 
 const data: { name: string; url: string; imageSrc: StaticImageData }[] = [
   {
