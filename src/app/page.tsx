@@ -22,16 +22,15 @@ export default async function Home() {
   return (
     <main>
       <SectionContainer>
-        <div className=" bg-[url(/images/eagle.png)] relative path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat min-h-[60vh] bg-[90%] sm:bg-[120%] lg:bg-contain lg:bg-left  mt-12">
-         
-          <Image
-            src={logo}
-            height={40}
-            alt="GDSC Logo"
-            className="hidden lg:block w-auto ml-auto self-start my-auto"
-          />
-          <div className="text-right z-10 h-fit">
-            <div className="flex flex-col text-5xl md:text-6xl xl:text-7xl font-bold mb-4">
+        <div className=" bg-[url(/images/eagle.png)] lg:min-h-0 relative path flex flex-col items-end justify-end bg-cover bg-no-repeat bg-[90%] sm:bg-[120%] md:bg-contain md:bg-[-170px] lg:bg-left mt-12 px-2">
+          <div className="text-right z-10 h-fit pt-40">
+            <Image
+              src={logo}
+              height={40}
+              alt="GDSC Logo"
+              className="hidden md:block w-auto ml-auto self-start mb-12"
+            />
+            <div className="flex flex-col text-5xl md:text-6xl font-bold mb-4">
               <span>Grow</span>
               <span>Learn</span>
               <span>Connect</span>
@@ -50,7 +49,7 @@ export default async function Home() {
       </SectionContainer>
 
       <SectionContainer className="px-2">
-        <div className="flex justify-end my-24">
+        <div className="flex justify-end my-16">
           <div className="w-2/3 md:w-2/5 flex gap-4">
             <div className="border-2 border-blue-mute w-1/5 h-4 rounded-full "></div>
             <div className="bg-blue-mute w-4/5 h-4 rounded-full"></div>
@@ -87,7 +86,7 @@ export default async function Home() {
       </SectionContainer>
 
       <SectionContainer className="px-2">
-        <div className="w-2/3 md:w-2/5 flex gap-4 my-24">
+        <div className="w-2/3 md:w-2/5 flex gap-4 my-16">
           <div className="bg-red-mute w-4/5 h-4 rounded-full"></div>
           <div className="border-2 border-red-mute w-1/5 h-4 rounded-full "></div>
         </div>
@@ -146,7 +145,7 @@ export default async function Home() {
 
       <SectionContainer className="px-2">
         <div className=" bg-cover bg-no-repeat bg-none sm:bg-[url('/images/datacamp-bg.png')]">
-          <div className="w-2/3 md:w-2/5 flex ml-auto gap-4 my-24 ">
+          <div className="w-2/3 md:w-2/5 flex ml-auto gap-4 my-16 ">
             <div className="border-2 border-green-mute w-1/5 h-4 rounded-full "></div>
             <div className="bg-green-mute w-4/5 h-4 rounded-full"></div>
           </div>
@@ -185,7 +184,7 @@ export default async function Home() {
       </SectionContainer>
 
       <SectionContainer className="px-2">
-        <div className="flex justify-end my-24">
+        <div className="flex justify-end my-16">
           <div className="w-2/3 md:w-2/5 flex gap-4 mr-auto">
             <div className="bg-yellow-mute w-4/5 h-4 rounded-full"></div>
             <div className="border-2 border-yellow-mute w-1/5 h-4 rounded-full"></div>
