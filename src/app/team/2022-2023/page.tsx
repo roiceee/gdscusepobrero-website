@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <main>
       <section className="my-20">
-        <div className="sm:flex justify-center">
+        <div className="sm:flex justify-center gap-[24px]">
           <div>
             <h1 className="text-3xl font-bold text-center">Lead</h1>
             <div className="mt-4">
