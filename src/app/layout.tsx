@@ -10,7 +10,10 @@ const googlesans = googleSans({
 });
 
 export const metadata: Metadata = {
-  title: "Google Developer Student Clubs USeP Obrero",
+  title: {
+    template: "%s - Google Developer Student Clubs USeP Obrero",
+    default: "Google Developer Student Clubs USeP Obrero",
+  },
   description:
     "Official website of Google Developer Student Clubs USeP Obrero chapter. Google Developer Student Clubs USeP Obrero is an accredited student-run organization whose members are driven to learn Google developer technologies, improve skills in a peer-to-peer learning environment and foster a community of like-minded individuals who are passionate in technology, innovation, and growth.",
   creator: "John Roice Aldeza",

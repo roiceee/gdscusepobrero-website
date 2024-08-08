@@ -3,7 +3,7 @@ import SectionContainer from "@/containers/SectionContainer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Team - Google Developer Student Clubs USeP Obrero",
+  title: "Team",
   description:
     "The amazing individuals behind GDSC USeP Obrero, dedicated to establishing and nurturing a thriving tech community.",
   openGraph: {

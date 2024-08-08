@@ -13,7 +13,7 @@ import jivin from "/public/images/team/2023-2024/jib.webp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About - Google Developer Student Clubs USeP Obrero",
+  title: "About",
   description:
     "Google Developer Student Clubs USeP Obrero is an accredited student-run organization whose members are driven to learn Google developer technologies, improve skills in a peer-to-peer learning environment and foster a community of like-minded individuals who are passionate in technology, innovation, and growth.",
   openGraph: {

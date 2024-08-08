@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Contact - Google Developer Student Clubs USeP Obrero",
+  title: "Contact",
   description:
     "Contact GDSC USeP Obrero for inquiries, collaborations, and sponsorships.",
   openGraph: {

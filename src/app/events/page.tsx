@@ -7,7 +7,7 @@ import ScrapedEventType from "../../types/scrapedEventType";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Events - Google Developer Student Clubs USeP Obrero",
+  title: "Events",
   description:
     "Stay updated with the latest events from Google Developer Student Clubs USeP Obrero.",
   openGraph: {
