@@ -76,7 +76,9 @@ export function StickyNavbar({}) {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between text-blue-gray-900">
           <div>
-            <Image src={gdscIcon} alt="GDSC Icon" height={32} />
+            <Link href={"/"}>
+              <Image src={gdscIcon} alt="GDSC Icon" height={32} />
+            </Link>
           </div>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden md:block">{navList}</div>
