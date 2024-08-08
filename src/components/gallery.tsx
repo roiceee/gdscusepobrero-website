@@ -87,6 +87,7 @@ export default function Gallery() {
           alt=""
           height={1600}
           width={900}
+          placeholder="blur"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
