@@ -21,7 +21,7 @@ export default function Page() {
               <OfficerCard data={lead} className="mx-auto" />
             </div>
           </div>
-          <div>
+          <div className="mt-[24px] sm:mt-0">
             <h1 className="text-3xl font-bold text-center">CEO</h1>
             <div className="mt-4">
               <OfficerCard data={ceo} className="mx-auto" />
