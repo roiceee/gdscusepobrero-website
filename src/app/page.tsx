@@ -22,11 +22,11 @@ export default async function Home() {
   return (
     <main>
       <SectionContainer>
-        <div className=" bg-[url(/images/eagle.png)] relative md:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat min-h-[60vh] bg-[90%] sm:bg-[120%] mt-12">
+        <div className=" bg-[url(/images/eagle.png)] relative lg:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat min-h-[60vh] bg-[90%] sm:bg-[120%] mt-12">
           <Image
             src={eagle}
             alt="USeP Eagle Statue"
-            className="absolute w-full object-cover md:object-contain md:object-left hidden md:block"
+            className="absolute w-full object-cover lg:object-contain lg:object-left hidden lg:block"
             //
             fill
             placeholder="blur"
@@ -36,7 +36,7 @@ export default async function Home() {
             src={logo}
             height={40}
             alt="GDSC Logo"
-            className="hidden lg:block w-auto ml-auto self-start my-auto"
+            className="hidden xl:block w-auto ml-auto self-start my-auto"
           />
           <div className="text-right z-10 h-fit">
             <div className="flex flex-col text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
