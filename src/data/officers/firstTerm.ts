@@ -50,7 +50,7 @@ const technology: OfficerType[] = [
   },
   {
     name: "Vincent Reate",
-    position: "",
+    position: "Engineering Lead",
     imageSrc: reate,
     links: {
       facebook: "https://www.facebook.com/vincent.d.reate/",
@@ -59,19 +59,19 @@ const technology: OfficerType[] = [
   },
   {
     name: "Dave John Ferras",
-    position: "",
+    position: "Design Lead",
     imageSrc: placeholder,
     links: {},
   },
   {
     name: "Cjmarie Jagape",
-    position: "",
+    position: "Data Science Lead",
     imageSrc: cjmarie,
     links: {},
   },
   {
     name: "Jonard Ray Cabunag",
-    position: "",
+    position: "Tech Education Lead",
     imageSrc: placeholder,
     links: {},
   },
@@ -89,13 +89,13 @@ const communications: OfficerType[] = [
   },
   {
     name: "Melvyn John Paleguin",
-    position: "",
+    position: "Promotions Manager",
     imageSrc: melvyn,
     links: {},
   },
   {
     name: "Jay Robert Lloyd Delicana",
-    position: "",
+    position: "Creatives Manager",
     imageSrc: jay,
     links: {
       website: "https://www.behance.net/srdonyxxx",
@@ -106,7 +106,7 @@ const communications: OfficerType[] = [
   },
   {
     name: "Emmanuel Leyba",
-    position: "",
+    position: "Documentation Manager",
     imageSrc: placeholder,
     links: {},
   },
@@ -127,13 +127,13 @@ const operations: OfficerType[] = [
 
   {
     name: "Patrick Cruz",
-    position: "",
+    position: "Events Manager",
     imageSrc: patrick,
     links: {},
   },
   {
     name: "Krishna Laureto",
-    position: "",
+    position: "Secretariat",
     imageSrc: krishna,
     links: {
       website: "",
@@ -143,7 +143,7 @@ const operations: OfficerType[] = [
   },
   {
     name: "Lindsay Cañete",
-    position: "",
+    position: "Project Management Lead",
     imageSrc: lindsay,
     links: {
       website: "",
@@ -163,13 +163,13 @@ const financeAndExternals: OfficerType[] = [
   },
   {
     name: "Kyra Jane Melendres",
-    position: "",
+    position: "Finance Manager",
     imageSrc: kyra,
     links: {},
   },
   {
     name: "Francis Ryan Diesto",
-    position: "",
+    position: "Externals Manager",
     imageSrc: diesto,
     links: {
       linkedin: "www.linkedin.com/in/francis-ryan-diesto",
