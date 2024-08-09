@@ -46,7 +46,7 @@ function Footer() {
           />
         </div>
         <div className="mt-6 md:mt-12 text-sm text-center">
-          © 2023 GDSC USeP Obrero. All Rights Reserved.
+          © 2024 GDSC USeP Obrero. All Rights Reserved.
         </div>
       </div>
     </div>
