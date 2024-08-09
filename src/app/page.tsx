@@ -57,7 +57,7 @@ export default async function Home() {
         </div>
 
         <p className="text-center text-3xl font-black lg:text-4xl">
-          What are <br /> Google Developer Student Clubs?
+          What are Google Developer Student Clubs?
         </p>
 
         <div className="flex flex-col-reverse items-center justify-center gap-14 mt-16 lg:flex-row">
