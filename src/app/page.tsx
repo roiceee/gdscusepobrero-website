@@ -42,7 +42,7 @@ export default async function Home() {
             //
             fill
             placeholder="blur"
-            style={{ left: "-100px" }}
+            style={{ left: "-200px" }}
           />
           <div className="text-right z-10 h-fit pt-40">
             <Image
