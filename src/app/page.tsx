@@ -33,11 +33,12 @@ export default async function Home() {
   return (
     <main>
       <SectionContainer>
-        <div className=" bg-[url(/images/eagle.png)] relative lg:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat bg-[90%] sm:bg-[120%] mt-12">
+        <div className=" bg-[url(/images/eagle.png)] relative lg:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat bg-[90%] sm:bg-[120%] mt-12"
+        >
           <Image
             src={eagle}
             alt="USeP Eagle Statue"
-            className="absolute w-full object-cover lg:object-contain lg:object-left hidden lg:block opacity-80"
+            className="absolute w-full object-cover lg:object-contain lg:object-left hidden lg:block"
             //
             fill
             placeholder="blur"
