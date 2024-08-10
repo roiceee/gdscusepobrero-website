@@ -19,10 +19,30 @@ export default async function Home() {
     | { status: number; events: ScrapedEventType[] }
     | undefined = await res.json();
 
+  // <div className=" bg-[url(/images/eagle.png)] relative lg:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat min-h-[60vh] bg-[90%] sm:bg-[120%] mt-12">
+  // <Image
+  //   src={eagle}
+  //   alt="USeP Eagle Statue"
+  //   className="absolute w-full object-cover lg:object-contain lg:object-left hidden lg:block"
+  //   //
+  //   fill
+  //   placeholder="blur"
+  //   style={{ left: "-100px" }}
+  // />
+
   return (
     <main>
       <SectionContainer>
-        <div className=" bg-[url(/images/eagle.png)] lg:min-h-0 relative path flex flex-col items-end justify-end bg-cover bg-no-repeat bg-[90%] sm:bg-[120%] md:bg-contain md:bg-[-170px] lg:bg-left mt-12 px-2">
+        <div className=" bg-[url(/images/eagle.png)] relative lg:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat bg-[90%] sm:bg-[120%] mt-12">
+          <Image
+            src={eagle}
+            alt="USeP Eagle Statue"
+            className="absolute w-full object-cover lg:object-contain lg:object-left hidden lg:block opacity-80"
+            //
+            fill
+            placeholder="blur"
+            style={{ left: "-100px" }}
+          />
           <div className="text-right z-10 h-fit pt-40">
             <Image
               src={logo}
@@ -56,20 +76,22 @@ export default async function Home() {
           </div>
         </div>
 
-        <p className="text-center text-3xl font-black lg:text-4xl">
-          What are Google Developer Student Clubs?
-        </p>
-
-        <div className="flex flex-col-reverse items-center justify-center gap-14 mt-16 lg:flex-row">
-          <p className="max-w-md">
-            <span className="font-bold">
-              Google Developer Student Clubs (GDSC)
-            </span>{" "}
-            are community groups for college and university students interested
-            in Google developer technologies. By joining a GDSC, students grow
-            their knowledge in a peer-to-peer learning environment and build
-            solutions for local businesses and their community.
-          </p>
+        <div className="flex flex-col items-center justify-center gap-14 mt-16 lg:flex-row">
+          <div className="max-w-xl">
+            <p className="text-3xl font-black lg:text-4xl mb-6">
+              What are Google Developer Student Clubs?
+            </p>
+            <p>
+              <span className="font-bold">
+                Google Developer Student Clubs (GDSC)
+              </span>{" "}
+              are community groups for college and university students
+              interested in Google developer technologies. By joining a GDSC,
+              students grow their knowledge in a peer-to-peer learning
+              environment and build solutions for local businesses and their
+              community.
+            </p>
+          </div>
 
           <div className="w-full max-w-2xl aspect-video">
             <iframe
