@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import googleSans from "next/font/local";
 import "../css/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { AlertDismissible } from "@/components/alert-dismissible";
 
 const googlesans = googleSans({
   src: "../../public/fonts/googlesans-regular.woff2",
@@ -55,8 +56,8 @@ export const metadata: Metadata = {
         height: 484,
         alt: "GDSC USeP Obrero",
       },
-    ]
-  }
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -67,6 +68,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${googlesans.className} text-black min-h-full`}>
       <body className="flex flex-col min-h-screen">
+        <AlertDismissible
+          message="For USeP Obrero Students: Become a member now! "
+          linkMessage="Sign Up Here!"
+          linkUrl="https://docs.google.com/forms/d/e/1FAIpQLSc8Q35i1q07c9IBUGLoe56TVVsNVcK_f4Nsyf2Fk3TsUufheQ/viewform?usp=sf_link"
+        />
         <StickyNavbar />
         <div className="flex-grow my-8">{children}</div>
         <Footer />

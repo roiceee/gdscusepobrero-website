@@ -19,17 +19,6 @@ export default async function Home() {
     | { status: number; events: ScrapedEventType[] }
     | undefined = await res.json();
 
-  // <div className=" bg-[url(/images/eagle.png)] relative lg:bg-none path px-2 flex flex-col items-end justify-end bg-cover bg-no-repeat min-h-[60vh] bg-[90%] sm:bg-[120%] mt-12">
-  // <Image
-  //   src={eagle}
-  //   alt="USeP Eagle Statue"
-  //   className="absolute w-full object-cover lg:object-contain lg:object-left hidden lg:block"
-  //   //
-  //   fill
-  //   placeholder="blur"
-  //   style={{ left: "-100px" }}
-  // />
-
   return (
     <main>
       <SectionContainer>
@@ -39,7 +28,6 @@ export default async function Home() {
             src={eagle}
             alt="USeP Eagle Statue"
             className="absolute w-full object-cover lg:object-contain lg:object-left hidden lg:block"
-            //
             fill
             placeholder="blur"
             style={{ left: "-200px" }}
