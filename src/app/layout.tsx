@@ -69,8 +69,8 @@ export default function RootLayout({
     <html lang="en" className={`${googlesans.className} text-black min-h-full`}>
       <body className="flex flex-col min-h-screen">
         <AlertDismissible
-          message="For USeP Obrero Students: Become a member now! "
-          linkMessage="Sign Up Here!"
+          message="For USeP Obrero Students: Become a member now!"
+          linkMessage="Sign up here."
           linkUrl="https://docs.google.com/forms/d/e/1FAIpQLSc8Q35i1q07c9IBUGLoe56TVVsNVcK_f4Nsyf2Fk3TsUufheQ/viewform?usp=sf_link"
         />
         <StickyNavbar />
