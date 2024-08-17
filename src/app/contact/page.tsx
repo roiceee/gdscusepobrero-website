@@ -1,10 +1,11 @@
 import { EmailIcon, LocationOnIcon } from "@/components/client-wrapper";
+import { ContactForm } from "@/components/contact-form";
 import SectionContainer from "@/containers/SectionContainer";
 import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact us",
   description:
     "Contact GDSC USeP Obrero for inquiries, collaborations, and sponsorships.",
   openGraph: {
@@ -47,7 +48,7 @@ const links: { icon: string; alt: string; url: string }[] = [
 export default function Page() {
   return (
     <main>
-      <SectionContainer className="bg-[url('/images/contactbackground.png')] bg-cover px-2 sm:px-10 mb-16">
+      <SectionContainer className="bg-[url('/images/contactbackground.png')] bg-cover px-2 md:px-10 mb-16">
         <div className="flex items-center justify-start gap-3 pt-16 mb-14">
           <div className="bg-red w-1/2 lg:w-1/4 h-5 rounded-full"></div>
           <div className=" border-red border-2 h-5 rounded-full w-[20px]"></div>
@@ -75,59 +76,63 @@ export default function Page() {
         </div>
       </SectionContainer>
 
-      <SectionContainer className="px-2 sm:px-10 mt-16">
+      <SectionContainer className="px-2 mt-16">
         <h2 className="text-4xl sm:text-6xl text-center font-bold mb-16">
           Reach Us
         </h2>
 
-        <section className="bg-gradient-to-b from-[#9A0000] to-[#460000] rounded-2xl p-8 lg:p-12 mt-16 max-w-[700px] mx-auto text-white">
-          <h2 className="text-3xl font-bold mb-2">Contact Information</h2>
-          <p className="mb-6">
-            For inquiries and more information about our events, sponsorship
-            opportunities, and collaborations, please reach out to us using the
-            contact details below.
-          </p>
-
-          <div>
-            {contactDetails.map((detail, index) => (
-              <div
-                key={index}
-                className="flex items-center mt-8 text-xs xs:text-md sm:text-lg"
-              >
-                <div className="w-12">{detail.icon}</div>
-                {detail.link ? (
-                  <a
-                    target="_blank"
-                    href={detail.link}
-                    className="hover:underline"
-                    rel="noreferrer noopener"
-                  >
-                    {detail.text}
-                  </a>
-                ) : (
-                  <p>{detail.text}</p>
-                )}
-              </div>
-            ))}
+        <section className="flex flex-col lg:flex-row gap-12 bg-gradient-to-b from-[#9A0000] to-[#460000] rounded-2xl p-8 mt-16 max-w-[1200px] mx-auto text-white">
+          <div className="max-w-[700px]">
+            <h2 className="text-3xl font-bold mb-2">Contact Information</h2>
+            <p className="mb-6">
+              For inquiries and more information about our events, sponsorship
+              opportunities, and collaborations, please reach out to us using
+              the contact details below.
+            </p>
+            <div>
+              {contactDetails.map((detail, index) => (
+                <div
+                  key={index}
+                  className="flex items-center mt-8 sm:text-lg gap-4"
+                >
+                  <div>{detail.icon}</div>
+                  {detail.link ? (
+                    <a
+                      target="_blank"
+                      href={detail.link}
+                      className="hover:underline"
+                      rel="noreferrer noopener"
+                    >
+                      {detail.text}
+                    </a>
+                  ) : (
+                    <p>{detail.text}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-row gap-2">
+              {links.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <Image
+                    src={link.icon}
+                    width={36}
+                    height={36}
+                    alt={link.alt}
+                    className="rounded-xl mt-8"
+                  />
+                </a>
+              ))}
+            </div>
           </div>
-
-          <div className="flex flex-row gap-2">
-            {links.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <Image
-                  src={link.icon}
-                  width={36}
-                  height={36}
-                  alt={link.alt}
-                  className="rounded-xl mt-8"
-                />
-              </a>
-            ))}
+          <div className="w-full">
+            <h2 className="text-2xl font-bold mb-2">Send a quick message!</h2>
+            <ContactForm />
           </div>
         </section>
       </SectionContainer>

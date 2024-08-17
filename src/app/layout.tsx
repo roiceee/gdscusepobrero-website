@@ -5,6 +5,7 @@ import googleSans from "next/font/local";
 import "../css/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { AlertDismissible } from "@/components/alert-dismissible";
+import Script from "next/script";
 
 const googlesans = googleSans({
   src: "../../public/fonts/googlesans-regular.woff2",
