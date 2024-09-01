@@ -1,11 +1,9 @@
 import Footer from "@/components/footer";
 import { StickyNavbar } from "@/components/navbar";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import googleSans from "next/font/local";
 import "../css/globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import { AlertDismissible } from "@/components/alert-dismissible";
-import Script from "next/script";
 
 const googlesans = googleSans({
   src: "../../public/fonts/googlesans-regular.woff2",
@@ -32,6 +30,7 @@ export const metadata: Metadata = {
   applicationName: "GDSC USeP Obrero Website",
   keywords: [
     "GDSC",
+    "GDSC USeP",
     "GDSC USeP Obrero",
     "Google Developer Student Clubs",
     "Google Developer Student Clubs USeP Obrero",
