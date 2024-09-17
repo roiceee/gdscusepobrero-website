@@ -26,9 +26,11 @@ export default async function Page() {
     cache: "no-store",
   });
 
-  const recentEventScrapedContent:
-    | { status: number; events: ScrapedEventType[] }
-    | undefined = await res.json();
+  const recentEventScrapedContent: {
+    status: number;
+    events?: ScrapedEventType[];
+    error?: string;
+  } = await res.json();
 
   const linkToBevy =
     "https://gdsc.community.dev/university-of-southeastern-philippines-davao-philippines/";
@@ -55,43 +57,46 @@ export default async function Page() {
 
         <section>
           <h2 className="text-2xl mb-8 font-semibold">Recent Events</h2>
-          {!recentEventScrapedContent && <p>Failed to fetch data.</p>}
+          {recentEventScrapedContent?.status === 500 && (
+            <p>Failed to fetch data.</p>
+          )}
           {recentEventScrapedContent && (
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-              {recentEventScrapedContent.events.map((event, index) => (
-                <div
-                  key={index}
-                  className="text-center flex flex-col justify-start items-center gap-6"
-                >
-                  <Link
-                    href={event.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+              {recentEventScrapedContent.events &&
+                recentEventScrapedContent.events.map((event, index) => (
+                  <div
+                    key={index}
+                    className="text-center flex flex-col justify-start items-center gap-6"
                   >
-                    <Image
-                      priority
-                      src={event.imageUrl}
-                      alt={event.name}
-                      width={200}
-                      height={200}
-                      className="rounded-full"
-                    />
-                  </Link>
-                  <div className="text-center">
                     <Link
                       href={event.url}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <h3 className="text-lg font-bold hover:underline">
-                        {event.name}
-                      </h3>
+                      <Image
+                        priority
+                        src={event.imageUrl}
+                        alt={event.name}
+                        width={200}
+                        height={200}
+                        className="rounded-full"
+                      />
                     </Link>
+                    <div className="text-center">
+                      <Link
+                        href={event.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <h3 className="text-lg font-bold hover:underline">
+                          {event.name}
+                        </h3>
+                      </Link>
 
-                    <p className="text-sm">{event.location}</p>
+                      <p className="text-sm">{event.location}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           )}
 
